@@ -18,6 +18,12 @@ Who becomes the first admin:
   * Otherwise the very first account created becomes ``admin`` (convenient locally).
 Afterwards only admins can grant the admin role (Admin page, or
 ``py scripts/make_admin.py <username>``).
+
+Seeded administrator: if both ``COURSEPATH_ADMIN_USERNAME`` and
+``COURSEPATH_ADMIN_PASSWORD_HASH`` are set (environment variables or root-level
+Streamlit secrets), that admin account is (re)created automatically whenever it is
+missing, e.g. after a cloud restart wipes the account file. The hash is made with
+``py scripts/hash_password.py``; the plain password is never stored anywhere.
 """
 
 from __future__ import annotations
@@ -84,6 +90,41 @@ def reserved_admin() -> str | None:
     """Username reserved for the first administrator, if configured."""
     name = os.environ.get("COURSEPATH_ADMIN_USERNAME", "").strip().lower()
     return name or None
+
+
+def hash_for_secret(password: str) -> str:
+    """'pbkdf2_sha256$<salt hex>$<hash hex>' for COURSEPATH_ADMIN_PASSWORD_HASH."""
+    salt = secrets.token_bytes(16)
+    return f"pbkdf2_sha256${salt.hex()}${_hash(password, salt)}"
+
+
+def ensure_seeded_admin() -> bool:
+    """Create the configured admin account if it is missing. Returns True if created."""
+    name = reserved_admin()
+    encoded = os.environ.get("COURSEPATH_ADMIN_PASSWORD_HASH", "").strip()
+    if not name or not encoded:
+        return False
+    try:
+        scheme, salt_hex, hash_hex = encoded.split("$")
+        bytes.fromhex(salt_hex)
+        bytes.fromhex(hash_hex)
+    except ValueError:
+        return False
+    if scheme != "pbkdf2_sha256":
+        return False
+    with _lock:
+        users = _load()
+        rec = users.get(name)
+        if rec is not None:
+            if rec["role"] != "admin":  # the seeded account is always an administrator
+                rec["role"] = "admin"
+                _save(users)
+            return False
+        users[name] = {"name": os.environ.get("COURSEPATH_ADMIN_DISPLAY_NAME", "Administrator").strip() or "Administrator",
+                       "role": "admin", "salt": salt_hex, "hash": hash_hex, "created": now(), "last_login": None}
+        _save(users)
+    audit("system", "seed admin", name)
+    return True
 
 
 def normalise_username(username: str) -> str:

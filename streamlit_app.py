@@ -1,7 +1,19 @@
+import os
+
 import streamlit as st
 
 from core import auth, settings
 from core.state import init
+
+# Root-level secrets (.streamlit/secrets.toml locally, "Secrets" on Streamlit Cloud)
+# become environment variables, which core/auth.py reads.
+try:
+    for _k, _v in st.secrets.items():
+        if isinstance(_v, (str, int, float)) and _k not in os.environ:
+            os.environ[_k] = str(_v)
+except Exception:  # noqa: BLE001 - no secrets configured
+    pass
+auth.ensure_seeded_admin()  # recreate the built-in administrator if it is missing
 
 cfg = settings.load()
 st.set_page_config(page_title=cfg["app_name"], page_icon=":material/route:", layout="wide")
@@ -30,8 +42,13 @@ if cfg["announcement"].strip():
     getattr(st, cfg["announcement_type"], st.info)(cfg["announcement"], icon=":material/campaign:")
 
 user = ss.user
-main = [
-    st.Page("app_pages/overview.py", title="Overview", icon=":material/home:", default=True),
+is_admin = user["role"] == "admin"
+land_on_admin = is_admin and ss.pop("go_admin", False)  # signed in through "Admin login"
+
+main = [st.Page("app_pages/overview.py", title="Overview", icon=":material/home:", default=not land_on_admin)]
+if is_admin:  # second in the menu so it is always visible, never hidden under "more"
+    main.append(st.Page("app_pages/admin.py", title="Admin", icon=":material/admin_panel_settings:", default=land_on_admin))
+main += [
     st.Page("app_pages/tutorial.py", title="Tutorial", icon=":material/school:"),
     st.Page("app_pages/planner.py", title="Roadmap planner", icon=":material/route:"),
     st.Page("app_pages/simulation.py", title="Career simulation", icon=":material/hub:"),
@@ -41,8 +58,8 @@ main = [
 if user["role"] in cfg["data_manager_roles"]:
     main.append(st.Page("app_pages/data.py", title="Data manager", icon=":material/database:"))
 personal = [st.Page("app_pages/account.py", title="Account", icon=":material/account_circle:")]
-if user["role"] == "admin":
-    personal.insert(0, st.Page("app_pages/admin.py", title="Admin", icon=":material/admin_panel_settings:"))
 
 page = st.navigation({"": main, user["name"]: personal}, position="top")
+if land_on_admin:
+    ss.welcomed = True  # skip the welcome pop-up for admin sign-ins
 page.run()

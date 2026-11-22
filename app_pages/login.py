@@ -21,10 +21,20 @@ def advisor_code() -> str | None:
         return None
 
 
-def sign_in(user: dict):
+def sign_in(user: dict, *, to_admin: bool = False):
     ss.user = user
     ss.login_failures = 0
+    if to_admin:
+        ss.go_admin = True
     st.rerun()
+
+
+def failed_attempt(message: str):
+    ss.login_failures = ss.get("login_failures", 0) + 1
+    if ss.login_failures >= int(cfg["max_attempts"]):
+        ss.locked_until, ss.login_failures = time.time() + int(cfg["lock_seconds"]), 0
+        st.rerun()
+    st.error(message, icon=":material/error:")
 
 
 _, mid, _ = st.columns([1, 2, 1])
@@ -33,10 +43,12 @@ with mid:
     st.caption(cfg["tagline"])
 
     can_signup = cfg["allow_signup"] or no_admin  # the administrator account can always be created
-    tabs = st.tabs([":material/login: Sign in"] + ([":material/person_add: Create account"] if can_signup else []))
+    labels = [":material/login: Sign in"] + ([":material/person_add: Create account"] if can_signup else [])
+    labels.append(":material/admin_panel_settings: Admin login")
+    tabs = st.tabs(labels)
+    locked_for = int(ss.get("locked_until", 0) - time.time())
 
     with tabs[0]:
-        locked_for = int(ss.get("locked_until", 0) - time.time())
         if locked_for > 0:
             st.warning(f"Too many failed attempts. Try again in {locked_for} seconds.", icon=":material/lock_clock:")
         with st.form("sign_in", border=False):
@@ -47,11 +59,7 @@ with mid:
             user = authenticate(username, password)
             if user:
                 sign_in(user)
-            ss.login_failures = ss.get("login_failures", 0) + 1
-            if ss.login_failures >= int(cfg["max_attempts"]):
-                ss.locked_until, ss.login_failures = time.time() + int(cfg["lock_seconds"]), 0
-                st.rerun()
-            st.error("Username or password is incorrect.", icon=":material/error:")
+            failed_attempt("Username or password is incorrect.")
         if first_account:
             st.info("No accounts yet. Create the first one in **Create account**; it becomes the administrator.", icon=":material/info:")
 
@@ -84,6 +92,22 @@ with mid:
                     st.error(msg)
             if not code_required and not first_account:
                 st.caption("Anyone can create an advisor account. An admin can require an invite code on the Admin page.")
+
+    with tabs[-1]:
+        st.caption("For administrators. Opens the Admin page directly after signing in.")
+        if locked_for > 0:
+            st.warning(f"Too many failed attempts. Try again in {locked_for} seconds.", icon=":material/lock_clock:")
+        with st.form("admin_sign_in", border=False):
+            a_user = st.text_input("Admin username", autocomplete="username")
+            a_pass = st.text_input("Admin password", type="password", autocomplete="current-password")
+            a_submit = st.form_submit_button("Sign in as admin", type="primary", icon=":material/admin_panel_settings:",
+                                             width="stretch", disabled=locked_for > 0)
+        if a_submit:
+            user = authenticate(a_user, a_pass)
+            if user and user["role"] == "admin":
+                sign_in(user, to_admin=True)
+            # Same message whether the password was wrong or the account isn't an admin.
+            failed_attempt("Admin username or password is incorrect.")
 
     if cfg["allow_guest"]:
         st.divider()

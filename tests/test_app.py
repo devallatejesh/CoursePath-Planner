@@ -19,6 +19,9 @@ _TMP = Path(tempfile.mkdtemp())
 os.environ["COURSEPATH_USERS_FILE"] = str(_TMP / "auth" / "users.json")
 shutil.copytree(ROOT / "data", _TMP / "data", ignore=shutil.ignore_patterns("backups"))
 os.environ["COURSEPATH_DATA_DIR"] = str(_TMP / "data")
+# Ignore any real admin configured in .streamlit/secrets.toml (empty values win over secrets).
+os.environ["COURSEPATH_ADMIN_USERNAME"] = ""
+os.environ["COURSEPATH_ADMIN_PASSWORD_HASH"] = ""
 
 import pandas as pd  # noqa: E402
 from streamlit.testing.v1 import AppTest  # noqa: E402
@@ -40,6 +43,9 @@ ADVISOR = {"username": "adv", "name": "Test Advisor", "role": "advisor"}
 def new_app(user=STUDENT):
     """An AppTest already signed in (welcome dialog already shown)."""
     at = AppTest.from_file(APP, default_timeout=180)
+    # Override the real .streamlit/secrets.toml so tests never seed the real admin.
+    at.secrets["COURSEPATH_ADMIN_USERNAME"] = os.environ.get("COURSEPATH_ADMIN_USERNAME", "")
+    at.secrets["COURSEPATH_ADMIN_PASSWORD_HASH"] = os.environ.get("COURSEPATH_ADMIN_PASSWORD_HASH", "")
     if user and user["username"] != "guest" and auth.get_user(user["username"]) is None:
         users = auth._load()  # make sure the account exists with exactly this role
         users[user["username"]] = {"name": user["name"], "role": user["role"], "salt": "00" * 16, "hash": "x", "created": auth.now()}
@@ -543,7 +549,53 @@ def test_reserved_admin_username():
         at.run()
         assert not any("becomes the administrator" in i.value for i in at.info), "don't advertise admin bootstrap when reserved"
     finally:
-        del os.environ["COURSEPATH_ADMIN_USERNAME"]
+        os.environ["COURSEPATH_ADMIN_USERNAME"] = ""
+
+
+def test_seeded_admin_account():
+    _reset_accounts()
+    os.environ["COURSEPATH_ADMIN_USERNAME"] = "seed_admin07"
+    os.environ["COURSEPATH_ADMIN_PASSWORD_HASH"] = auth.hash_for_secret("Spruce@2024")
+    try:
+        assert auth.ensure_seeded_admin() is True
+        assert auth.get_user("seed_admin07")["role"] == "admin"
+        assert auth.authenticate("seed_admin07", "Spruce@2024") and not auth.authenticate("seed_admin07", "wrong-pass1")
+        assert "Spruce@2024" not in auth.users_file().read_text(), "plain password never stored"
+        assert auth.ensure_seeded_admin() is False, "idempotent"
+        users = auth._load(); users["seed_admin07"]["role"] = "student"; auth._save(users)
+        auth.ensure_seeded_admin()
+        assert auth.get_user("seed_admin07")["role"] == "admin", "seeded account is always admin"
+        users = auth._load(); del users["seed_admin07"]; auth._save(users)  # e.g. cloud restart wiped accounts
+        assert auth.ensure_seeded_admin() is True and auth.authenticate("seed_admin07", "Spruce@2024")
+        assert not auth.create_user("seed_admin07", "Other2024x", "Imposter")[0], "name already taken"
+        os.environ["COURSEPATH_ADMIN_PASSWORD_HASH"] = "garbage"
+        users = auth._load(); del users["seed_admin07"]; auth._save(users)
+        assert auth.ensure_seeded_admin() is False, "malformed hash is ignored"
+    finally:
+        os.environ["COURSEPATH_ADMIN_USERNAME"] = ""
+        os.environ["COURSEPATH_ADMIN_PASSWORD_HASH"] = ""
+
+
+def test_admin_login_tab():
+    _reset_accounts()
+    auth.create_user("boss", "Birch2024c", "Boss")  # first account -> admin
+    auth.create_user("stu", "Aspen2024d", "Stu")
+    at = new_app(user=None)
+    at.run()
+    assert any("Admin login" in t.label for t in at.tabs)
+
+    def admin_try(u, p):
+        [t for t in at.text_input if t.label == "Admin username"][0].input(u)
+        [t for t in at.text_input if t.label == "Admin password"][0].input(p)
+        [b for b in at.button if b.label == "Sign in as admin"][0].click().run()
+
+    admin_try("stu", "Aspen2024d")
+    assert "user" not in at.session_state, "a non-admin can't use the admin login"
+    assert any("Admin username or password is incorrect" in e.value for e in at.error)
+    admin_try("boss", "Birch2024c")
+    assert not at.exception, at.exception
+    assert at.session_state["user"]["role"] == "admin"
+    assert at.title[0].value == "Admin", "admin login lands on the Admin page"
 
 
 if __name__ == "__main__":

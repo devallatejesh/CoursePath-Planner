@@ -27,6 +27,26 @@ py -m streamlit run streamlit_app.py
 
 Every `git push` to `main` redeploys automatically. Free hosting has no permanent disk: accounts, settings and published data reset when the app restarts or sleeps. For permanent storage, host on a service with a persistent disk (for example Render or Railway) and point `COURSEPATH_USERS_FILE` and `COURSEPATH_DATA_DIR` at it.
 
+## Built-in administrator and Admin login
+
+The sign-in page has an **Admin login** tab that only accepts admin accounts and opens the Admin page directly. For admins, **Admin** is the second item in the top menu.
+
+A built-in admin account is created automatically whenever it is missing (for example after a cloud restart wipes accounts). Configure it with secrets, never in code:
+
+```bash
+py scripts/hash_password.py <admin-username> "Display Name"
+```
+
+This asks for the password and prints three lines. Put them in `.streamlit/secrets.toml` locally (git-ignored) and in the app's **Secrets** on Streamlit Community Cloud:
+
+```toml
+COURSEPATH_ADMIN_USERNAME = "..."
+COURSEPATH_ADMIN_PASSWORD_HASH = "pbkdf2_sha256$..."
+COURSEPATH_ADMIN_DISPLAY_NAME = "..."
+```
+
+Only the salted hash is stored; the password itself is never written anywhere.
+
 ## First time here?
 
 1. Start the app and **create an account** on the sign-in page, or press **Continue as guest**. The **first account ever created becomes the administrator** (or, when `COURSEPATH_ADMIN_USERNAME` is set, the account with that username).
@@ -99,7 +119,7 @@ Uploads are checked before they are applied. The checks cover missing columns, d
 - `core/agents.py`: the four agents and the orchestrator
 - `core/abm.py`: MESA `CareerPathModel`
 - `core/state.py`: the active dataset in the Streamlit session
-- `tests/test_app.py`: run with `py tests/test_app.py` (28 checks covering admin access control, login, roles, the tutorial, the planner, datasets, uploads and every page)
+- `tests/test_app.py`: run with `py tests/test_app.py` (30 checks covering admin access control, login, roles, the tutorial, the planner, datasets, uploads and every page)
 - `tests/fuzz.py`: run with `py tests/fuzz.py 300`. It generates random programs and job markets, chains re-plans, and checks that no hard rule is broken.
 
 ## Notes
