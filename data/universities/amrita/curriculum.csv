@@ -1,0 +1,246 @@
+branch,semester,code,title,category,ltp,credits
+B.Tech CSE,1,23ENG101,Technical Communication,HUM,2-0-3,3
+B.Tech CSE,1,23MAT107,Calculus,SCI,3-0-2,4
+B.Tech CSE,1,23CSE101,Computational Problem Solving,CSE,3-0-2,4
+B.Tech CSE,1,23EEE104,Introduction to Electrical and Electronics Engineering,ENGG,3-0-0,3
+B.Tech CSE,1,23EEE184,Basic Electrical and Electronics Engineering Practice,ENGG,0-0-2,1
+B.Tech CSE,1,23CSE102,Computer Hardware Essentials,ENGG,1-0-2,2
+B.Tech CSE,1,22ADM101,Foundations of Indian Heritage,HUM,2-0-1,2
+B.Tech CSE,1,22AVP103,Mastery Over Mind,HUM,1-0-2,2
+B.Tech CSE,2,23MAT116,Discrete Mathematics,SCI,3-0-2,4
+B.Tech CSE,2,23MAT117,Linear Algebra,SCI,3-0-2,4
+B.Tech CSE,2,23CSE111,Object Oriented Programming,CSE,3-0-2,4
+B.Tech CSE,2,23PHY115,Modern Physics,SCI,2-1-0,3
+B.Tech CSE,2,23CSE113,User Interface Design,CSE,2-0-2,3
+B.Tech CSE,2,23MEE115,Manufacturing Practice,ENGG,0-0-3,1
+B.Tech CSE,2,22ADM111,Glimpses of Glorious India,HUM,2-0-1,2
+B.Tech CSE,3,23MAT206,Optimization Techniques,SCI,3-0-2,4
+B.Tech CSE,3,23ECE205,Digital Electronics,ENGG,3-0-0,3
+B.Tech CSE,3,23CSE201,Procedural Programming using C,CSE,3-0-2,4
+B.Tech CSE,3,23CSE202,Database Management Systems,CSE,3-0-2,4
+B.Tech CSE,3,23CSE203,Data Structures and Algorithms,CSE,3-1-2,5
+B.Tech CSE,3,23ECE285,Digital Electronics Laboratory,ENGG,0-0-3,1
+B.Tech CSE,3,23LSE201,Life Skills for Engineers I,HUM,1-0-2,P/F
+B.Tech CSE,3,,Amrita Value Programme I,HUM,1-0-0,1
+B.Tech CSE,4,23MAT216,Probability and Random Processes,SCI,3-0-2,4
+B.Tech CSE,4,23CSE211,Design and Analysis of Algorithms,CSE,3-0-2,4
+B.Tech CSE,4,23CSE212,Principles of Functional Languages,CSE,2-0-2,3
+B.Tech CSE,4,23CSE213,Computer Organization and Architecture,ENGG,3-1-0,4
+B.Tech CSE,4,23CSE214,Operating Systems,CSE,3-0-2,4
+B.Tech CSE,4,,Amrita Value Programme II,HUM,1-0-0,1
+B.Tech CSE,4,,Free Elective I,HUM,2-0-0,2
+B.Tech CSE,4,23LSE211,Life Skills for Engineers II,HUM,1-0-2,2
+B.Tech CSE,5,23CSE301,Machine Learning,CSE,3-0-2,4
+B.Tech CSE,5,23CSE302,Computer Networks,CSE,3-1-2,5
+B.Tech CSE,5,23CSE303,Theory of Computation,CSE,3-1-0,4
+B.Tech CSE,5,23CSE304,Embedded Systems,ENGG,3-0-2,4
+B.Tech CSE,5,,Professional Elective I,CSE,3-0-0,3
+B.Tech CSE,5,,Professional Elective II,CSE,3-0-0,3
+B.Tech CSE,5,23LSE301,Life Skills for Engineers III,HUM,1-0-2,2
+B.Tech CSE,5,23LIV390,Live-in-Labs I,ENGG,,[3]
+B.Tech CSE,5,23ENV300,Environmental Science,HUM,,P/F
+B.Tech CSE,6,23CSE311,Software Engineering,ENGG,3-0-2,4
+B.Tech CSE,6,23CSE312,Distributed Systems,ENGG,3-0-2,4
+B.Tech CSE,6,23CSE313,Foundations of Cyber Security,CSE,3-0-0,3
+B.Tech CSE,6,23CSE314,Compiler Design,CSE,3-0-2,4
+B.Tech CSE,6,,Professional Elective III,CSE,3-0-0,3
+B.Tech CSE,6,23CSE399,Project Phase I,PRJ,0-0-6,3
+B.Tech CSE,6,23LSE311,Life Skills for Engineers IV,HUM,1-0-2,2
+B.Tech CSE,7,23CSE401,Fundamentals of Artificial Intelligence,CSE,2-0-2,3
+B.Tech CSE,7,,Professional Elective IV,CSE,3-0-0,3
+B.Tech CSE,7,,Professional Elective V,CSE,3-0-0,3
+B.Tech CSE,7,,Professional Elective VI,CSE,3-0-0,3
+B.Tech CSE,7,,Free Elective II,ENGG,2-0-0,2
+B.Tech CSE,7,23CSE498,Project Phase II,PRJ,0-0-12,6
+B.Tech CSE,7,23LAW300,Indian Constitution,HUM,,P/F
+B.Tech CSE,8,23CSE499,Project Phase III,PRJ,0-0-12,6
+B.Tech CSE (AI),1,22MAT110,Mathematics for Computing 1,SCI,2-1-3,4
+B.Tech CSE (AI),1,22PHY106,Computational Physics,SCI,2-0-3,3
+B.Tech CSE (AI),1,22AIE101,Problem Solving & C Programming,ENGG,2-1-3,4
+B.Tech CSE (AI),1,22AIE102,Elements of Computing Systems 1,ENGG,2-0-3,3
+B.Tech CSE (AI),1,22MAT121,Discrete Mathematics,ENGG,2-0-3,3
+B.Tech CSE (AI),1,22ADM101,Foundations of Indian Heritage,HUM,2-0-0,2
+B.Tech CSE (AI),1,19ENG111,Technical Communication,HUM,2-0-3,3
+B.Tech CSE (AI),1,22AVP103,Mastery Over Mind,HUM,1-0-2,2
+B.Tech CSE (AI),2,22MAT122,Mathematics for Computing 2,SCI,2-1-3,4
+B.Tech CSE (AI),2,22AIE111,Object Oriented Programming in Java,ENGG,2-1-3,4
+B.Tech CSE (AI),2,22AIE112,Data Structures & Algorithms 1,ENGG,2-1-3,4
+B.Tech CSE (AI),2,22AIE113,Elements of Computing Systems 2,ENGG,2-0-3,3
+B.Tech CSE (AI),2,22AIE114,Introduction to Electrical and Electronics Engineering,ENGG,2-0-3,3
+B.Tech CSE (AI),2,22AIE115,User Interface Design,ENGG,2-0-3,3
+B.Tech CSE (AI),2,22ADM111,Glimpses of Glorious India,HUM,2-0-0,2
+B.Tech CSE (AI),3,22MAT220,Mathematics for Computing 3,SCI,2-1-3,4
+B.Tech CSE (AI),3,22AIE201,Fundamentals of AI,ENGG,2-0-3,3
+B.Tech CSE (AI),3,22AIE202,Operating Systems,ENGG,2-0-3,3
+B.Tech CSE (AI),3,22AIE203,Data Structures & Algorithms 2,ENGG,2-0-3,3
+B.Tech CSE (AI),3,22AIE204,Introduction to Computer Networks,ENGG,2-0-3,3
+B.Tech CSE (AI),3,22AIE205,Introduction to Python,ENGG,1-0-3,2
+B.Tech CSE (AI),3,22BIO201,Intelligence of Biological Systems 1,ENGG,2-0-0,2
+B.Tech CSE (AI),3,,Free Elective 1,ENGG,2-0-0,2
+B.Tech CSE (AI),3,,Amrita Values Program,HUM,1-0-0,1
+B.Tech CSE (AI),4,22MAT230,Mathematics for Computing 4,SCI,2-1-3,4
+B.Tech CSE (AI),4,22AIE211,Introduction to Communication & IoT,ENGG,2-0-3,3
+B.Tech CSE (AI),4,22AIE212,Design and Analysis of Algorithms,ENGG,2-0-3,3
+B.Tech CSE (AI),4,22AIE213,Machine Learning,ENGG,2-0-3,3
+B.Tech CSE (AI),4,22AIE214,Introduction to AI Robotics,ENGG,2-0-3,3
+B.Tech CSE (AI),4,22BIO211,Intelligence of Biological Systems 2,ENGG,2-0-3,3
+B.Tech CSE (AI),4,,Amrita Values Program,HUM,1-0-0,1
+B.Tech CSE (AI),4,19ENV300,Environmental Science,HUM,,P/F
+B.Tech CSE (AI),4,19SSK211,Soft Skills I,HUM,1-0-3,2
+B.Tech CSE (AI),5,22AIE301,Probabilistic Reasoning,ENGG,2-0-3,3
+B.Tech CSE (AI),5,22AIE302,Formal Language and Automata,ENGG,2-1-0,3
+B.Tech CSE (AI),5,22AIE303,Database Management Systems,ENGG,2-1-3,4
+B.Tech CSE (AI),5,22AIE304,Deep Learning,ENGG,2-0-3,3
+B.Tech CSE (AI),5,22AIE305,Introduction to Cloud Computing,ENGG,2-0-3,3
+B.Tech CSE (AI),5,,Professional Elective 1,ENGG,2-0-3,3
+B.Tech CSE (AI),5,19SSK301,Soft Skills II,HUM,1-0-3,2
+B.Tech CSE (AI),5,19LIV390,Live-in-Labs I,HUM,,[3]
+B.Tech CSE (AI),6,22AIE311,Software Engineering (Project-Based),ENGG,2-0-3,3
+B.Tech CSE (AI),6,22AIE312,Big Data Analytics,ENGG,2-0-3,3
+B.Tech CSE (AI),6,22AIE313,Computer Vision & Image Processing,ENGG,2-1-3,4
+B.Tech CSE (AI),6,22AIE314,Computer Security,ENGG,2-0-3,3
+B.Tech CSE (AI),6,22AIE315,Natural Language Processing,ENGG,2-0-3,3
+B.Tech CSE (AI),6,,Professional Elective 2,ENGG,2-0-3,3
+B.Tech CSE (AI),6,19SSK311,Soft Skills III,HUM,1-0-3,2
+B.Tech CSE (AI),6,19LIV490,Live-in-Labs II,ENGG,,[3]
+B.Tech CSE (AI),7,22AIE401,Reinforcement Learning,ENGG,2-0-3,3
+B.Tech CSE (AI),7,,Professional Elective 3,ENGG,2-0-3,3
+B.Tech CSE (AI),7,,Professional Elective 4,ENGG,2-0-3,3
+B.Tech CSE (AI),7,19LAW300,Indian Constitution,HUM,1-0-0,P/F
+B.Tech CSE (AI),7,,Free Elective 2,ENGG,3-0-0,3
+B.Tech CSE (AI),7,22AIE498,Project Phase 1,PRJ,,6
+B.Tech CSE (AI),8,22AIE499,Project Phase 2,PRJ,,10
+B.Tech ECE,1,23ECE101,Nature Inspired Engineering,SCI,3-0-0,3
+B.Tech ECE,1,23MAT124,Engineering Mathematics I,SCI,3-1-0,4
+B.Tech ECE,1,23ECE102,Problem Solving and Algorithmic Thinking,ENGG,1-0-3,2
+B.Tech ECE,1,23ECE103,Fundamentals of Electrical Engineering,ENGG,3-0-0,3
+B.Tech ECE,1,23ECE104,Physics of Semiconductors,SCI,3-0-0,3
+B.Tech ECE,1,23ECE105,Computer Programming,ENGG,3-0-0,3
+B.Tech ECE,1,23ECE181,Electrical Engineering Laboratory,ENGG,0-0-3,1
+B.Tech ECE,1,23ECE182,Computer Programming Laboratory,ENGG,0-0-3,1
+B.Tech ECE,1,22ADM101,Foundations of Indian Heritage,HUM,2-0-1,2
+B.Tech ECE,1,22AVP103,Mastery Over Mind,HUM,1-0-2,2
+B.Tech ECE,2,23MAT130,Engineering Mathematics II,SCI,3-1-0,4
+B.Tech ECE,2,23ECE111,Electronic Devices and Circuits,ENGG,3-0-0,3
+B.Tech ECE,2,23ECE112,Signal Processing I (Transforms + Signals and Systems),SCI/ENGG,3-0-0,3
+B.Tech ECE,2,23ECE114,Network Analysis (Laplace Transforms + Circuit Analysis),SCI/ENGG,3-0-0,3
+B.Tech ECE,2,23ECE183,Signal Processing I Laboratory,ENGG,0-0-3,1
+B.Tech ECE,2,23ECE184,Introduction to Internet of Things,ENGG,0-0-3,1
+B.Tech ECE,2,23ECE185,Electronic Devices & Circuits Laboratory,ENGG,0-0-3,1
+B.Tech ECE,2,23ENG101,Technical Communication,HUM,2-0-3,3
+B.Tech ECE,2,22ADM111,Glimpses of Glorious India,HUM,2-0-1,2
+B.Tech ECE,3,23ECE201,Digital Electronics,ENGG,3-0-0,3
+B.Tech ECE,3,23ECE202,Analog Electronics I,ENGG,3-0-0,3
+B.Tech ECE,3,23ECE203,Signal Processing II,ENGG,3-0-0,3
+B.Tech ECE,3,23ECE204,Electromagnetic Theory and Waves,ENGG,3-1-0,4
+B.Tech ECE,3,23ECE205,Foundations of Data Science (Probability and Statistics + Data Processing),SCI/ENGG,3-1-0,4
+B.Tech ECE,3,23ECE281,Digital Electronics Laboratory,ENGG,0-0-3,1
+B.Tech ECE,3,23ECE282,Analog Electronics Laboratory,ENGG,0-0-3,1
+B.Tech ECE,3,23ECE283,Digital Signal Processing Laboratory,ENGG,0-0-3,1
+B.Tech ECE,3,,Amrita Value Programme 1,HUM,1-0-0,1
+B.Tech ECE,3,23CHY109,Engineering Chemistry B,SCI,2-1-0,3
+B.Tech ECE,3,23ENV300,Environmental Science,SCI,,P/F
+B.Tech ECE,3,23LSE201,Life Skills for Engineers I,HUM,1-0-2,P/F
+B.Tech ECE,4,23ECE211,Microcontrollers & Interfacing,ENGG,3-0-0,3
+B.Tech ECE,4,23ECE212,Analog Electronics II,ENGG,3-0-0,3
+B.Tech ECE,4,23ECE213,Communication Theory (Random Variables and Processes + Analog Communication),SCI/ENGG,3-1-0,4
+B.Tech ECE,4,23ECE215,Control Systems,ENGG,3-1-0,4
+B.Tech ECE,4,23ECE216,Machine Learning (Optimization Techniques + Machine Learning Models),SCI/ENGG,3-0-0,3
+B.Tech ECE,4,23ECE284,Microcontrollers & Interfacing Laboratory,ENGG,0-0-3,1
+B.Tech ECE,4,23ECE285,Machine Learning Laboratory,ENGG,0-0-3,1
+B.Tech ECE,4,23ECE286,Circuits and Communication Laboratory,ENGG,0-0-3,1
+B.Tech ECE,4,23LSE211,Life Skills for Engineers II,HUM,1-0-2,2
+B.Tech ECE,4,,Amrita Value Program 2,HUM,1-0-0,1
+B.Tech ECE,4,23LAW300,Indian Constitution,HUM,,P/F
+B.Tech ECE,5,23ECE301,Computer Systems and Architecture,ENGG,3-0-0,3
+B.Tech ECE,5,23ECE302,VLSI Design,ENGG,3-0-0,3
+B.Tech ECE,5,23ECE303,Radio Frequency and Microwave Engineering,ENGG,3-0-0,3
+B.Tech ECE,5,23ECE304,Digital Communication,ENGG,3-1-0,4
+B.Tech ECE,5,,Professional Elective I,ENGG,3-0-0,3
+B.Tech ECE,5,23ECE381,Open Laboratory I,PRJ,0-0-3,1
+B.Tech ECE,5,23ECE382,Radio Frequency and Microwave Laboratory,ENGG,0-0-3,1
+B.Tech ECE,5,23ECE383,VLSI Design Laboratory,ENGG,0-0-3,1
+B.Tech ECE,5,23ECE384,Communication Systems Laboratory,ENGG,0-0-3,1
+B.Tech ECE,5,23LSE301,Life Skills for Engineers III,HUM,1-0-2,2
+B.Tech ECE,5,23LIV390,Live-in-Lab I,ENGG,,[3]
+B.Tech ECE,6,23ECE311,Wireless Communication & Networks,ENGG,3-0-0,3
+B.Tech ECE,6,23ECE312,Computer Networks and Protocols,ENGG,3-0-0,3
+B.Tech ECE,6,23ECE313,Embedded Systems,ENGG,3-0-0,3
+B.Tech ECE,6,,Professional Elective II,ENGG,3-0-0,3
+B.Tech ECE,6,,Professional Elective III,ENGG,3-0-0,3
+B.Tech ECE,6,23ECE385,Open Laboratory II,PRJ,0-0-6,2
+B.Tech ECE,6,23ECE386,Wireless Communication and Networks Laboratory,ENGG,0-0-3,1
+B.Tech ECE,6,23ECE387,Embedded Systems Laboratory,ENGG,0-0-3,1
+B.Tech ECE,6,23LSE311,Life Skills for Engineers IV,HUM,1-0-2,2
+B.Tech ECE,6,23LIV490,Live-in-Lab II,ENGG,,[3]
+B.Tech ECE,7,,Professional Elective IV,ENGG,3-0-0,3
+B.Tech ECE,7,,Professional Elective V,ENGG,3-0-0,3
+B.Tech ECE,7,,Professional Elective VI,ENGG,3-0-0,3
+B.Tech ECE,7,23ECE498,Project Phase I,PRJ,0-0-24,8
+B.Tech ECE,7,,Free Elective,ENGG,2-0-0,2
+B.Tech ECE,7,23ECE497,Technical Writing,ENGG,,P/F
+B.Tech ECE,8,23ECE499,Project Phase II,PRJ,0-0-18,6
+B.Tech Robotics & AI,1,23MAT126,Mathematics for Intelligent Systems 1,SCI,2-0-3,3
+B.Tech Robotics & AI,1,24PHY104,Engineering Physics,SCI,2-1-0,3
+B.Tech Robotics & AI,1,23CSE116,C Programming,GEC,2-0-3,3
+B.Tech Robotics & AI,1,23EEE105,Basic Electrical and Electronics Engineering,GEC,3-0-3,4
+B.Tech Robotics & AI,1,23MEE106,Engineering Graphics and 3D Modelling,GEC,1-0-3,2
+B.Tech Robotics & AI,1,22AVP103,Mastery Over Mind,HUM,1-0-2,2
+B.Tech Robotics & AI,1,22ADM101,Foundations of Indian Heritage,HUM,2-0-1,2
+B.Tech Robotics & AI,1,23ENG101,Technical Communication,HUM,2-0-3,3
+B.Tech Robotics & AI,1,23ENV300,Environmental Science,HUM,,P/F
+B.Tech Robotics & AI,2,23MAT131,Mathematics for Intelligent Systems 2,SCI,2-0-3,3
+B.Tech Robotics & AI,2,23CSE117,Object Oriented Programming,GEC,2-0-3,3
+B.Tech Robotics & AI,2,23MEE112,Elements of Mechanical Engineering,GEC,3-0-0,3
+B.Tech Robotics & AI,2,24MEE113,Computational Engineering Mechanics,GEC,2-0-3,3
+B.Tech Robotics & AI,2,23MEE182,Manufacturing Practices-B,GEC,0-0-3,1
+B.Tech Robotics & AI,2,23ECE118,Sensors and Signal Processing,ENG,3-0-3,4
+B.Tech Robotics & AI,2,23RAI111,Fundamentals of Artificial Intelligence,ENG,3-0-0,3
+B.Tech Robotics & AI,2,22ADM111,Glimpses of Glorious India,HUM,2-0-1,2
+B.Tech Robotics & AI,3,23MAT221,Mathematics for Intelligent Systems 3,SCI,2-0-3,3
+B.Tech Robotics & AI,3,23CSE207,Python Programming,GEC,1-0-3,2
+B.Tech Robotics & AI,3,23MEE207,Design Thinking,GEC,1-0-3,2
+B.Tech Robotics & AI,3,23MEE208,Materials Science,GEC,2-0-3,3
+B.Tech Robotics & AI,3,23MEE209,Theory of Mechanisms and Machines,ENG,3-0-3,4
+B.Tech Robotics & AI,3,23EEE206,Actuators and Drives,ENG,3-0-0,3
+B.Tech Robotics & AI,3,23ECE207,Micro Controllers and Embedded Systems,ENG,3-0-3,4
+B.Tech Robotics & AI,3,,Amrita Value Program I,HUM,1-0-0,1
+B.Tech Robotics & AI,3,23LAW300,Indian Constitution,ADC,,P/F
+B.Tech Robotics & AI,3,23LSE201,Life Skills for Engineers I,HUM,1-0-2,P/F
+B.Tech Robotics & AI,4,23MAT226,Mathematics for Intelligent Systems 4,SCI,2-0-3,3
+B.Tech Robotics & AI,4,23CSE215,Data Science,ENG,2-0-3,3
+B.Tech Robotics & AI,4,23RAI211,Kinematics of Robotic Systems,ENG,3-0-0,3
+B.Tech Robotics & AI,4,23EEE216,Control Systems,ENG,3-0-0,3
+B.Tech Robotics & AI,4,23MEE216,Manufacturing Processes,ENG,2-0-3,3
+B.Tech Robotics & AI,4,23RAI281,Robot Kinematics and Control System Lab,ENG,0-0-3,1
+B.Tech Robotics & AI,4,,Free Elective,ELE,2-0-0,2
+B.Tech Robotics & AI,4,23LSE211,Life Skills for Engineers II,HUM,1-0-2,2
+B.Tech Robotics & AI,4,,Amrita Value Program II,HUM,1-0-0,1
+B.Tech Robotics & AI,5,23MAT307,Graph Theory Algorithms for Robotics,SCI,2-0-3,3
+B.Tech Robotics & AI,5,23RAI301,Fluid Power Systems,ENG,2-0-0,2
+B.Tech Robotics & AI,5,23RAI302,Dynamics and Control of Robotic Systems,ENG,3-0-0,3
+B.Tech Robotics & AI,5,23RAI303,Machine Learning,ENG,3-0-3,4
+B.Tech Robotics & AI,5,23RAI304,Robot Operating System,ENG,1-0-3,2
+B.Tech Robotics & AI,5,23RAI381,Fluid Power Systems and Robot Dynamics & Control Lab,ENG,0-0-3,1
+B.Tech Robotics & AI,5,23RAI305,Introduction to Drones,ENG,1-0-3,2
+B.Tech Robotics & AI,5,23RAI300,Research Methodology,ADC,,P/F
+B.Tech Robotics & AI,5,,Professional Elective 1 / Live-in-Lab I,ELE,3-0-0,3
+B.Tech Robotics & AI,5,23LSE301,Life Skills for Engineers III,HUM,1-0-2,2
+B.Tech Robotics & AI,6,23MEE316,Additive Manufacturing,ENG,1-0-3,2
+B.Tech Robotics & AI,6,23RAI311,Mobile Robots,ENG,3-0-0,3
+B.Tech Robotics & AI,6,23RAI312,Deep Learning,ENG,2-0-3,3
+B.Tech Robotics & AI,6,23RAI313,IoT and Automation,ENG,2-0-3,3
+B.Tech Robotics & AI,6,23RAI382,Mobile Robots Lab,ENG,0-0-3,1
+B.Tech Robotics & AI,6,23RAI398,Mini Project,PRJ,0-0-6,2
+B.Tech Robotics & AI,6,,Professional Elective 2 / Live-in-Lab II,ELE,3-0-0,3
+B.Tech Robotics & AI,6,,Professional Elective 3,ELE,3-0-0,3
+B.Tech Robotics & AI,6,23LSE311,Life Skills for Engineers IV,HUM,1-0-2,2
+B.Tech Robotics & AI,7,23RAI401,Computer Integrated Manufacturing,ENGG,3-0-0,3
+B.Tech Robotics & AI,7,23RAI402,Reinforcement Learning,ENGG,2-0-3,3
+B.Tech Robotics & AI,7,23RAI481,CNC and System Simulation Laboratory,ENGG,0-0-3,1
+B.Tech Robotics & AI,7,,Professional Elective 4,ELE,3-0-0,3
+B.Tech Robotics & AI,7,,Professional Elective 5,ELE,3-0-0,3
+B.Tech Robotics & AI,7,23RAI497,Summer Internship,PRJ,,1
+B.Tech Robotics & AI,7,23RAI498,Project Phase I,PRJ,,4
+B.Tech Robotics & AI,8,23RAI499,Project Phase II,PRJ,,8
+B.Tech Robotics & AI,8,,Professional Elective 6,ELE,3-0-0,3

@@ -7,7 +7,7 @@ from core.auth import SIGNUP_ROLES, admin_count, authenticate, create_user, rese
 
 ss = st.session_state
 cfg = settings.load()
-# Without a reserved admin username, the very first account becomes the administrator.
+# Without a reserved admin email, the very first account becomes the administrator.
 first_account = user_count() == 0 and reserved_admin() is None
 no_admin = admin_count() == 0
 
@@ -52,14 +52,14 @@ with mid:
         if locked_for > 0:
             st.warning(f"Too many failed attempts. Try again in {locked_for} seconds.", icon=":material/lock_clock:")
         with st.form("sign_in", border=False):
-            username = st.text_input("Username", autocomplete="username")
+            username = st.text_input("Email", autocomplete="email", placeholder="name@example.com")
             password = st.text_input("Password", type="password", autocomplete="current-password")
             submitted = st.form_submit_button("Sign in", type="primary", icon=":material/login:", width="stretch", disabled=locked_for > 0)
         if submitted:
             user = authenticate(username, password)
             if user:
                 sign_in(user)
-            failed_attempt("Username or password is incorrect.")
+            failed_attempt("Email or password is incorrect.")
         if first_account:
             st.info("No accounts yet. Create the first one in **Create account**; it becomes the administrator.", icon=":material/info:")
 
@@ -70,8 +70,7 @@ with mid:
             code_required = advisor_code()
             with st.form("create", border=False):
                 name = st.text_input("Your name")
-                new_user = st.text_input("Username", help="3-32 characters: lowercase letters, numbers, dot, dash or underscore",
-                                         autocomplete="username")
+                new_user = st.text_input("Email", autocomplete="email", placeholder="name@example.com")
                 pw1 = st.text_input("Password", type="password", help="At least 8 characters with a letter and a number",
                                     autocomplete="new-password")
                 pw2 = st.text_input("Confirm password", type="password", autocomplete="new-password")
@@ -98,7 +97,7 @@ with mid:
         if locked_for > 0:
             st.warning(f"Too many failed attempts. Try again in {locked_for} seconds.", icon=":material/lock_clock:")
         with st.form("admin_sign_in", border=False):
-            a_user = st.text_input("Admin username", autocomplete="username")
+            a_user = st.text_input("Admin email", autocomplete="email")
             a_pass = st.text_input("Admin password", type="password", autocomplete="current-password")
             a_submit = st.form_submit_button("Sign in as admin", type="primary", icon=":material/admin_panel_settings:",
                                              width="stretch", disabled=locked_for > 0)
@@ -107,10 +106,4 @@ with mid:
             if user and user["role"] == "admin":
                 sign_in(user, to_admin=True)
             # Same message whether the password was wrong or the account isn't an admin.
-            failed_attempt("Admin username or password is incorrect.")
-
-    if cfg["allow_guest"]:
-        st.divider()
-        if st.button("Continue as guest", icon=":material/person:", width="stretch",
-                     help="Explore everything as a student. Nothing is saved to an account."):
-            sign_in({"username": "guest", "name": "Guest", "role": "student"})
+            failed_attempt("Admin email or password is incorrect.")

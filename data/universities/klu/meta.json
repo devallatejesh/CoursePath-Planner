@@ -1,0 +1,25 @@
+{
+  "name": "K L Deemed to be University (KLEF), Vaddeswaram",
+  "short_name": "KLU",
+  "order": 4,
+  "built_in": true,
+  "term_names": {
+    "1": "T1",
+    "2": "T2",
+    "3": "T3",
+    "4": "Summer 1",
+    "5": "T4",
+    "6": "T5",
+    "7": "T6",
+    "8": "Summer 2",
+    "9": "T7",
+    "10": "T8",
+    "11": "T9",
+    "12": "Summer 3",
+    "13": "T10",
+    "14": "T11",
+    "15": "T12"
+  },
+  "term_word": "Term",
+  "source": "KLU Y25 B.Tech programme structures (y25btech.klef.in), 2025-2029 batch: CSE and ECE, PBL trimester mode (12 trimesters + 3 summer terms), with each course's modules, textbooks, PBL project and KLU's recommended MOOCs."
+}

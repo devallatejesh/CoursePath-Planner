@@ -1,0 +1,7 @@
+{
+  "name": "Alliance University, Bengaluru",
+  "short_name": "Alliance",
+  "source": "Alliance University B.Tech program pages (alliance.edu.in): CSE, AI & ML, ECE course structures. The site lists course names and categories only, without codes, credits or syllabus units. The AI & ML page shows the same course list as CSE.",
+  "built_in": true,
+  "order": 2
+}

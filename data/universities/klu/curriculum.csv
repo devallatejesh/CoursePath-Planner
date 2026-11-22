@@ -1,0 +1,129 @@
+branch,semester,code,title,category,ltp,credits
+B.Tech CSE,1,25UC1203E,Design Thinking for Innovation,HSS,0-0-4-0,2
+B.Tech CSE,1,25UC1102E,Language Skills for Engineers,HSS,0-0-4-0,2
+B.Tech CSE,1,25MT1002E,Discrete Mathematics,BSC,2-0-4-0,4
+B.Tech CSE,1,25SC1105E,Problem Solving Through Programming (Java),ESC,2-0-2-6,4.5
+B.Tech CSE,1,25SC1104E,Fundamentals of Web Development,ESC,2-0-0-6,3.5
+B.Tech CSE,2,25UC1204E,Communication Skills for Engineers,HSS,0-0-4-0,2
+B.Tech CSE,2,25MT1205E,Mathematics for AI,BSC,2-0-4-0,4
+B.Tech CSE,2,25SC1204E,Data Structures and Algorithms - 1,ESC,2-0-2-4,4
+B.Tech CSE,2,25CS1201E,Front End Development Frameworks and UI Engineering,ESC,0-0-4-4,3
+B.Tech CSE,2,25EC2101E,Digital Design and Computer Architecture,ESC,2-0-0-4,3
+B.Tech CSE,3,FLP-1,Foreign Language Proficiency - 1,HSS,0-0-4-0,2
+B.Tech CSE,3,25MT1306E,Mathematics for Data Science and Analytics,BSC,2-0-4-0,4
+B.Tech CSE,3,25SC1306E,Computational Foundations for Artificial Intelligence,ESC,2-0-0-4,3
+B.Tech CSE,3,25SC1305E,Data Structures and Algorithms - 2,ESC,2-0-2-4,4
+B.Tech CSE,3,25CS1302E,Database Systems Engineering and Distributed Backend Development,PCC,2-0-2-4,4
+B.Tech CSE,4,25IE2040E,Social Internship,PRI,0-0-0-4,0
+B.Tech CSE,5,25CS2103E,Data Structures and Algorithms - 3,PCC,2-0-2-4,4
+B.Tech CSE,5,25EC2206E,Embedded System Design and IoT,PCC,2-0-0-8,4
+B.Tech CSE,5,25SC2107E,Machine Learning,ESC,2-0-2-4,4
+B.Tech CSE,5,25CS2104E,Operating Systems and Systems Programming,PCC,2-0-2-4,4
+B.Tech CSE,5,FLP-2,Foreign Language Proficiency - 2,HSS,0-0-4-0,2
+B.Tech CSE,6,25CS2205E,Advanced Object Oriented Programming,PCC,2-0-2-4,4
+B.Tech CSE,6,25CS2206E,Cloud Infrastructure and Services,PCC,2-0-2-4,4
+B.Tech CSE,6,25CS2208E,Computer Networks and Network Programming,PCC,2-0-0-4,3
+B.Tech CSE,6,25CS2207E,Generative AI and AI Platform Engineering,PCC,2-0-0-8,4
+B.Tech CSE,6,,Value Added Course 1 - Sports,VAC,0-0-0-2,0
+B.Tech CSE,7,25CS2311E,System Design for Scalability and Reliability,PCC,2-0-2-4,4
+B.Tech CSE,7,25CS2310E,CI/CD and Cloud DevOps,PCC,2-0-0-4,3
+B.Tech CSE,7,25EC2308E,Embedded Software Development,PCC,2-0-0-8,4
+B.Tech CSE,7,25CS3112E,Deep Learning with Accelerated Computing,PCC,2-0-0-8,4
+B.Tech CSE,7,,Value Added Course 2 - Technical Global Certification 1,VAC,0-0-0-2,0
+B.Tech CSE,8,25IE3041E,Technical Internship,PRI,0-0-0-8,0
+B.Tech CSE,8,25UC0017E,Indian Knowledge Systems,AUC,2-0-0-0,0
+B.Tech CSE,9,25EC3111E,Foundations of Robotics and Mechatronic Systems,PCC,2-0-0-4,3
+B.Tech CSE,9,25CS3113E,Embedded AI and Tiny ML,PCC,2-0-0-8,4
+B.Tech CSE,9,25CS2309E,Big Data Engineering and Data Pipelines,PCC,2-0-0-8,4
+B.Tech CSE,9,,Professional Elective - 1,PEC,2-0-0-4,3
+B.Tech CSE,9,,Value Added Course 3 - Technical Global Certification 2,VAC,0-0-0-2,0
+B.Tech CSE,10,25EC3214E,"Robotic Perception, Computer Vision and Sensor Fusion",PCC,2-0-0-4,3
+B.Tech CSE,10,25CS3214E,Natural Language Processing and LLM Engineering,PCC,2-0-0-8,4
+B.Tech CSE,10,,Professional Elective - 2,PEC,2-0-0-4,3
+B.Tech CSE,10,,Professional Elective - 3,PEC,2-0-0-4,3
+B.Tech CSE,10,,Value Added Course 4 - Technical Global Certification 3,VAC,0-0-0-2,0
+B.Tech CSE,11,25EC3316E,"Robotic Motion Planning, Navigation and Control Systems",PCC,2-0-2-4,4
+B.Tech CSE,11,25CS3315E,Agentic AI and Autonomous Enterprise Systems,PCC,2-0-2-4,4
+B.Tech CSE,11,,Professional Elective - 4,PEC,2-0-0-4,3
+B.Tech CSE,11,,Professional Elective - 5,PEC,2-0-0-4,3
+B.Tech CSE,11,,Value Added Course 5 - Technical Global Certification 4,VAC,0-0-0-2,0
+B.Tech CSE,12,25IE4042E,Research / Industrial Internship,PRI,0-0-0-8,0
+B.Tech CSE,12,25UC0009E,Ecology and Environment,AUC,2-0-0-0,0
+B.Tech CSE,13,25EC4117E,Autonomous Robotic Systems and Human-Robot Interaction,PCC,2-0-0-4,3
+B.Tech CSE,13,,Open Elective - 1 (Pick a stream),OE,2-0-4-0,4
+B.Tech CSE,13,25CS4117E,Adaptive Software Engineering,PCC,2-0-0-4,3
+B.Tech CSE,13,25EC4119E,Agentic Embedded Systems and Intelligent Edge Orchestration,PCC,2-0-0-8,4
+B.Tech CSE,13,25IE4101E,Term Paper,PRI,0-0-6-0,3
+B.Tech CSE,14,25IE4053E,Capstone Project - 1,PRI,0-0-8-8,6
+B.Tech CSE,14,,Science Elective - 1 (Choose one),SE,2-0-4-0,4
+B.Tech CSE,14,25UC0008E,Indian Constitution,AUC,2-0-0-0,0
+B.Tech CSE,14,25UC0032E,Insights to Sustainable Development Goals,AUC,2-0-0-0,0
+B.Tech CSE,14,,Open Elective - 2 (Pick a stream),OE,2-0-4-0,4
+B.Tech CSE,15,25IE4054E,Capstone Project - 2,PRI,0-0-8-8,6
+B.Tech CSE,15,,Science Elective - 2 (Choose one),SE,2-0-4-0,4
+B.Tech CSE,15,,Management Elective (Pick a stream),MGEL,2-0-4-0,4
+B.Tech CSE,15,25UC0026E,"Human Values, Gender Equality & Professional Ethics",HSS,2-0-0-0,2
+B.Tech ECE,1,25UC1203E,Design Thinking for Innovation,HSS,0-0-4-0,2
+B.Tech ECE,1,25UC1102E,Language Skills for Engineers,HSS,0-0-4-0,2
+B.Tech ECE,1,25MT1002E,Discrete Mathematics,BSC,2-0-4-0,4
+B.Tech ECE,1,25SC1105E,Problem Solving Through Programming (Java),ESC,2-0-2-6,4.5
+B.Tech ECE,1,25SC1104E,Fundamentals of Web Development,ESC,2-0-0-6,3.5
+B.Tech ECE,2,25UC1204E,Communication Skills for Engineers,HSS,0-0-4-0,2
+B.Tech ECE,2,25MT1205E,Mathematics for AI,BSC,2-0-4-0,4
+B.Tech ECE,2,25SC1204E,Data Structures and Algorithms - 1,ESC,2-0-2-4,4
+B.Tech ECE,2,25CS1201E,Front End Development Frameworks and UI Engineering,ESC,0-0-4-4,3
+B.Tech ECE,2,25EC2101E,Digital Design and Computer Architecture,ESC,2-0-0-4,3
+B.Tech ECE,3,FLP-1,Foreign Language Proficiency - 1,HSS,0-0-4-0,2
+B.Tech ECE,3,25MT1307E,Mathematics for Communication Systems,BSC,2-0-4-0,4
+B.Tech ECE,3,25SC1306E,Computational Foundations for Artificial Intelligence,ESC,2-0-0-4,3
+B.Tech ECE,3,25SC1305E,Data Structures and Algorithms - 2,ESC,2-0-2-4,4
+B.Tech ECE,3,25EC1302E,Analog Electronic Circuit Design,PCC,0-0-4-4,3
+B.Tech ECE,4,25IE2040E,Social Internship,PRI,0-0-0-4,0
+B.Tech ECE,5,25EC2103E,CMOS VLSI Design,PCC,2-0-2-4,4
+B.Tech ECE,5,25SC2008E,Full Stack Web Development,ESC,0-0-4-4,3
+B.Tech ECE,5,25SC2107E,Machine Learning,ESC,2-0-2-4,4
+B.Tech ECE,5,25EC2104E,Signal Processing,PCC,2-0-2-4,4
+B.Tech ECE,5,FLP-2,Foreign Language Proficiency - 2,HSS,0-0-4-0,2
+B.Tech ECE,6,25EC2205E,Modern Communication Systems,PCC,2-0-2-4,4
+B.Tech ECE,6,25CS2208E,Computer Networks and Network Programming,PCC,2-0-0-4,3
+B.Tech ECE,6,25CS2207E,Generative AI and AI Platform Engineering,PCC,2-0-0-8,4
+B.Tech ECE,6,25EC2206E,Embedded System Design and IoT,PCC,2-0-0-8,4
+B.Tech ECE,6,,Value Added Course 1 - Sports,VAC,0-0-0-2,0
+B.Tech ECE,7,25EC2307E,FPGA Design and Implementation,PCC,2-0-2-4,4
+B.Tech ECE,7,25EC2308E,Embedded Software Development,PCC,2-0-0-8,4
+B.Tech ECE,7,25EC2309E,IoT Protocols and Cloud Integration,PCC,2-0-2-4,4
+B.Tech ECE,7,25EC2310E,Wireless Communication Protocols,PCC,2-0-2-4,4
+B.Tech ECE,7,,Value Added Course 2 - Technical Global Certification 1,VAC,0-0-0-2,0
+B.Tech ECE,8,25IE3041E,Technical Internship,PRI,0-0-0-8,0
+B.Tech ECE,8,25UC0017E,Indian Knowledge Systems,AUC,2-0-0-0,0
+B.Tech ECE,9,25EC3111E,Foundations of Robotics and Mechatronic Systems,PCC,2-0-0-4,3
+B.Tech ECE,9,25CS3113E,Embedded AI and Tiny ML,PCC,2-0-0-8,4
+B.Tech ECE,9,25CS3112E,Deep Learning with Accelerated Computing,PCC,2-0-0-8,4
+B.Tech ECE,9,,Professional Elective - 1,PEC,2-0-0-4,3
+B.Tech ECE,9,,Value Added Course 3 - Technical Global Certification 2,VAC,0-0-0-2,0
+B.Tech ECE,10,25EC3214E,"Robotic Perception, Computer Vision and Sensor Fusion",PCC,2-0-0-4,3
+B.Tech ECE,10,25CS3214E,Natural Language Processing and LLM Engineering,PCC,2-0-0-8,4
+B.Tech ECE,10,,Professional Elective - 2,PEC,2-0-0-4,3
+B.Tech ECE,10,,Professional Elective - 3,PEC,2-0-0-4,3
+B.Tech ECE,10,,Value Added Course 4 - Technical Global Certification 3,VAC,0-0-0-2,0
+B.Tech ECE,11,25EC3316E,"Robotic Motion Planning, Navigation and Control Systems",PCC,2-0-2-4,4
+B.Tech ECE,11,25EC3315E,Testing and Verification of VLSI Circuits,PCC,2-0-2-4,4
+B.Tech ECE,11,,Professional Elective - 4,PEC,2-0-0-4,3
+B.Tech ECE,11,,Professional Elective - 5,PEC,2-0-0-4,3
+B.Tech ECE,11,,Value Added Course 5 - Technical Global Certification 4,VAC,0-0-0-2,0
+B.Tech ECE,12,25IE4042E,Research / Industrial Internship,PRI,0-0-0-8,0
+B.Tech ECE,12,25UC0009E,Ecology and Environment,AUC,2-0-0-0,0
+B.Tech ECE,13,25EC4117E,Autonomous Robotic Systems and Human-Robot Interaction,PCC,2-0-0-4,3
+B.Tech ECE,13,,Open Elective - 1 (Pick a stream),OE,2-0-4-0,4
+B.Tech ECE,13,25EC4118E,"Edge AI Systems - NPU Architecture, Deployment and Optimization",PCC,2-0-2-4,4
+B.Tech ECE,13,25EC4119E,Agentic Embedded Systems and Intelligent Edge Orchestration,PCC,2-0-0-8,4
+B.Tech ECE,13,25IE4101E,Term Paper,PRI,0-0-6-0,3
+B.Tech ECE,14,25IE4053E,Capstone Project - 1,PRI,0-0-8-8,6
+B.Tech ECE,14,,Science Elective - 1 (Choose one),SE,2-0-4-0,4
+B.Tech ECE,14,25UC0008E,Indian Constitution,AUC,2-0-0-0,0
+B.Tech ECE,14,25UC0032E,Insights to Sustainable Development Goals,AUC,2-0-0-0,0
+B.Tech ECE,14,,Open Elective - 2 (Pick a stream),OE,2-0-4-0,4
+B.Tech ECE,15,25IE4054E,Capstone Project - 2,PRI,0-0-8-8,6
+B.Tech ECE,15,,Science Elective - 2 (Choose one),SE,2-0-4-0,4
+B.Tech ECE,15,,Management Elective (Pick a stream),MGEL,2-0-4-0,4
+B.Tech ECE,15,25UC0026E,"Human Values, Gender Equality & Professional Ethics",HSS,2-0-0-0,2

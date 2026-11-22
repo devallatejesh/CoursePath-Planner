@@ -16,31 +16,28 @@ _lock = threading.Lock()
 DEFAULTS: dict = {
     # Branding and text
     "app_name": "CoursePath planner",
-    "tagline": "Plan your degree with AI agents, get study resources for every subject, and test career paths.",
+    "tagline": "Every subject of your semester, with learning roadmaps, study resources and study agents.",
     "overview_intro": (
-        "A team of cooperating agents interprets each student's goals, checks every constraint, "
-        "and keeps the roadmap current all the way to graduation. A MESA agent-based model then "
-        "tests how planned and unplanned career paths play out in a simulated job market."
+        "Pick your university, branch and semester to see every subject in the official curriculum, with a "
+        "step-by-step learning roadmap built from its syllabus, links to study resources, and study agents that "
+        "plan your weeks. Your college isn't listed? Add it from its curriculum PDF."
     ),
     "welcome_message": (
         "In this app you can:\n"
-        "- turn your goals into a term-by-term degree roadmap,\n"
-        "- get study links under every subject,\n"
-        "- re-plan when a course is dropped or your goal changes,\n"
-        "- test career paths in a job-market simulation.\n\n"
-        "The 10-minute tutorial walks you through it."
+        "- see every subject in your branch and semester,\n"
+        "- follow a step-by-step learning roadmap for each subject,\n"
+        "- let study agents build a weekly plan for your goal,\n"
+        "- add your own college from its curriculum PDF.\n\n"
+        "The 4-minute tutorial walks you through it."
     ),
     "show_welcome": True,
     "announcement": "",
     "announcement_type": "info",  # info | success | warning | error
     # Access
     "allow_signup": True,
-    "allow_guest": True,
     "advisor_code": "",  # empty = anyone may create an advisor account
     "max_attempts": 5,
     "lock_seconds": 30,
-    # Who may change the session data on the Data manager page
-    "data_manager_roles": ["student", "advisor", "admin"],
 }
 
 ANNOUNCEMENT_TYPES = ("info", "success", "warning", "error")
@@ -72,8 +69,6 @@ def validate(new: dict) -> list[str]:
         problems.append("Failed sign-ins before lockout must be between 1 and 50.")
     if not 0 <= int(new.get("lock_seconds", -1)) <= 3600:
         problems.append("Lockout must be between 0 and 3600 seconds.")
-    if "admin" not in new.get("data_manager_roles", []):
-        problems.append("Admins must always be able to use the Data manager.")
     return problems
 
 

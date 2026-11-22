@@ -6,20 +6,20 @@ hash (200,000 iterations), compared in constant time. Accounts live in
 elsewhere. The audit log and site settings sit in the same folder.
 
 Roles
-    student  build and explore roadmaps
-    advisor  also approve roadmaps
-    admin    everything, plus the Admin page (users, settings, permanent data)
+    student  browse subjects and learning roadmaps
+    advisor  same access as a student (faculty accounts)
+    admin    everything, plus the Admin page (users and settings)
 
 Who becomes the first admin:
-  * If ``COURSEPATH_ADMIN_USERNAME`` is set (environment variable, or a root-level
-    secret on Streamlit Community Cloud), only an account with that username is made
+  * If ``COURSEPATH_ADMIN_EMAIL`` (or the older ``COURSEPATH_ADMIN_USERNAME``) is set
+    (environment variable, or a root-level secret on Streamlit Community Cloud), only an account with that email is made
     admin when it signs up, and only while no admin exists. Use this for any public
     deployment, so a stranger can't claim the admin role.
   * Otherwise the very first account created becomes ``admin`` (convenient locally).
 Afterwards only admins can grant the admin role (Admin page, or
-``py scripts/make_admin.py <username>``).
+``py scripts/make_admin.py <email>``).
 
-Seeded administrator: if both ``COURSEPATH_ADMIN_USERNAME`` and
+Seeded administrator: if both ``COURSEPATH_ADMIN_EMAIL`` and
 ``COURSEPATH_ADMIN_PASSWORD_HASH`` are set (environment variables or root-level
 Streamlit secrets), that admin account is (re)created automatically whenever it is
 missing, e.g. after a cloud restart wipes the account file. The hash is made with
@@ -41,7 +41,8 @@ from pathlib import Path
 ITERATIONS = 200_000
 ROLES = ("student", "advisor", "admin")
 SIGNUP_ROLES = ("student", "advisor")  # admin can never be self-selected
-USERNAME_RE = re.compile(r"^[a-z0-9][a-z0-9_.-]{2,31}$")
+USERNAME_RE = re.compile(r"^[a-z0-9][a-z0-9_.-]{2,31}$")  # older accounts made before sign-in used email
+EMAIL_RE = re.compile(r"^[a-z0-9._%+-]{1,64}@[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z]{2,24}$")
 MIN_PASSWORD = 8
 _lock = threading.RLock()
 
@@ -87,8 +88,8 @@ def _set_password(rec: dict, password: str) -> None:
 
 
 def reserved_admin() -> str | None:
-    """Username reserved for the first administrator, if configured."""
-    name = os.environ.get("COURSEPATH_ADMIN_USERNAME", "").strip().lower()
+    """Email (or older username) reserved for the first administrator, if configured."""
+    name = (os.environ.get("COURSEPATH_ADMIN_EMAIL", "") or os.environ.get("COURSEPATH_ADMIN_USERNAME", "")).strip().lower()
     return name or None
 
 
@@ -137,8 +138,9 @@ def password_problems(password: str, username: str = "") -> list[str]:
         problems.append(f"at least {MIN_PASSWORD} characters")
     if not re.search(r"[A-Za-z]", password) or not re.search(r"\d", password):
         problems.append("at least one letter and one number")
-    if username and username in password.lower():
-        problems.append("must not contain your username")
+    name_part = username.split("@")[0] if username else ""
+    if len(name_part) >= 3 and name_part in password.lower():
+        problems.append("must not contain your email name")
     return problems
 
 
@@ -151,10 +153,8 @@ def create_user(username: str, password: str, display_name: str, role: str = "st
     """Create an account. Self sign-up (by=None) may only pick SIGNUP_ROLES, except that
     the very first account becomes admin."""
     username = normalise_username(username)
-    if not USERNAME_RE.match(username):
-        return False, "Username must be 3-32 characters: lowercase letters, numbers, dot, dash or underscore."
-    if username == "guest":
-        return False, "That username is reserved."
+    if not EMAIL_RE.match(username) and not (username == reserved_admin() and USERNAME_RE.match(username)):
+        return False, "Enter a valid email address, like name@example.com."
     if role not in ROLES or (by is None and role not in SIGNUP_ROLES):
         return False, "That role can't be chosen here."
     problems = password_problems(password, username)
@@ -163,7 +163,7 @@ def create_user(username: str, password: str, display_name: str, role: str = "st
     with _lock:
         users = _load()
         if username in users:
-            return False, "That username is taken."
+            return False, "An account with that email already exists."
         reserved = reserved_admin()
         if reserved:
             first = username == reserved and admin_count(users) == 0

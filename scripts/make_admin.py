@@ -1,6 +1,6 @@
 """Give an existing account the admin role (for recovery when no admin can sign in).
 
-Usage:  py scripts/make_admin.py <username>
+Usage:  py scripts/make_admin.py <email>
 """
 import sys
 from pathlib import Path

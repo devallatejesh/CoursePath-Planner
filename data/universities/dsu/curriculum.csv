@@ -1,0 +1,228 @@
+branch,semester,code,title,category,ltp,credits
+B.Tech CSE,1,24EN1101,Linear Algebra and Differential Equations,BSC,3-0-0,3
+B.Tech CSE,1,24EN1102,Object Oriented Programming,ESC,2-1-2,4
+B.Tech CSE,1,24EN1103,Cognitive and Technical Skills I,TPC,0-0-4,2
+B.Tech CSE,1,24EN1104,Engineering Chemistry,BSC,2-0-2,3
+B.Tech CSE,1,24EN1105,Introduction to Mechanical Engineering,ESC,2-0-2,3
+B.Tech CSE,1,24EN1106,Introduction to Electrical Engineering,ESC,2-0-0,2
+B.Tech CSE,1,24EN1107,Engineering Mechanics,ESC,2-0-0,2
+B.Tech CSE,1,24EN1108,Technical English,HSMC,2-0-0,2
+B.Tech CSE,1,24EN1109,Environmental Science,AEC,1-0-0,0
+B.Tech CSE,1,24EN1110,Kannada Kali / Manasu,HSMC,1-0-0,0
+B.Tech CSE,2,24EN1201,Single and Multivariate Calculus,BSC,3-0-0,3
+B.Tech CSE,2,24EN1202,C Programming for Problem Solving,ESC,2-1-2,4
+B.Tech CSE,2,24EN1203,Cognitive and Technical Skills II,TPC,0-0-4,2
+B.Tech CSE,2,24EN1111,Engineering Physics,BSC,3-0-2,4
+B.Tech CSE,2,24EN1112,Introduction to Electronics Engineering,ESC,3-0-0,3
+B.Tech CSE,2,24EN1113,Engineering Graphics and Design Thinking,ESC,2-0-2,3
+B.Tech CSE,2,24EN1114,Biology for Engineers,AEC,2-0-0,2
+B.Tech CSE,2,24EN1115,Constitution of India and Professional Ethics,HSMC,1-0-0,0
+B.Tech CSE,3,20CS2301,Discrete Mathematical Structures,CR,3-0-0,3
+B.Tech CSE,3,20CS2302,Data Structures,CR,3-0-0,3
+B.Tech CSE,3,20CS2303,Digital Electronics & Logic Design,CR,3-0-0,4
+B.Tech CSE,3,20CS2304,Database Management Systems,CR,3-0-0,3
+B.Tech CSE,3,20CS2305,Computational Thinking with Python,CR,3-0-0,3
+B.Tech CSE,3,20CS2306,Agile Software Engineering,CR,2-0-0,3
+B.Tech CSE,3,20CS2307,Data Structures Lab,CR,0-0-2,1
+B.Tech CSE,3,20CS2308,Database Management Systems Lab,CR,0-0-2,1
+B.Tech CSE,3,20CS2309,Management and Entrepreneurship,CR,2-0-0,2
+B.Tech CSE,3,20CS2310,Liberal Studies I,CR,1-0-0,1
+B.Tech CSE,4,20CS2401,Probability and Statistics,CR,3-0-0,3
+B.Tech CSE,4,20CS2402,Object Oriented Design and Programming,CR,3-0-0,3
+B.Tech CSE,4,20CS2403,Principles of Microprocessors and Computer Organization,CR,4-0-0,4
+B.Tech CSE,4,20CS2404,Finite Automata & Formal Languages,CR,3-0-0,4
+B.Tech CSE,4,20CS2405,Introduction to Networks & Cybersecurity,CR,3-0-0,3
+B.Tech CSE,4,20CS2406,Full Stack Development,CR,2-0-0,3
+B.Tech CSE,4,20CS2407,Object Oriented Programming Lab,CR,0-0-2,1
+B.Tech CSE,4,20CS2408,Microprocessors Laboratory,CR,0-0-2,1
+B.Tech CSE,4,20CS2409,Special Topics I,CR,0-0-0,2
+B.Tech CSE,4,20CS2410,Liberal Studies II,CR,1-0-0,1
+B.Tech CSE,5,20CS3501,Computer Networks,CR,3-0-2,4
+B.Tech CSE,5,20CS3502,Design and Analysis of Algorithms,CR,3-0-0,3
+B.Tech CSE,5,20CS3503,Operating Systems,CR,3-1-0,4
+B.Tech CSE,5,20CS3504,Machine Learning,CR,3-0-2,4
+B.Tech CSE,5,,Professional Elective 1,CR,3-0-0,3
+B.Tech CSE,5,,Open Elective 1,CR,3-0-0,3
+B.Tech CSE,5,20CS3505,Design and Analysis of Algorithms Lab,CR,0-0-2,1
+B.Tech CSE,5,20CS3506,Operating Systems Lab,CR,0-0-2,1
+B.Tech CSE,5,20CS3507,Special Topics II,CR,0-0-0,2
+B.Tech CSE,6,20CS3601,Compiler Design and System Software,CR,3-1-0,4
+B.Tech CSE,6,20CS3602,Secure Programming,CR,2-0-2,3
+B.Tech CSE,6,20CS3603,Cloud Application Development,CR,3-0-0,3
+B.Tech CSE,6,,Professional Elective 2,CR,3-0-0,3
+B.Tech CSE,6,,Professional Elective 3,CR,3-0-0,3
+B.Tech CSE,6,,Open Elective 2,CR,3-0-0,3
+B.Tech CSE,6,20CS3604,Compiler Design and System Software Lab,CR,0-0-2,1
+B.Tech CSE,6,20CS3605,Cloud Application Development Lab,CR,0-0-2,1
+B.Tech CSE,7,,Professional Elective 4,CR,3-0-0,3
+B.Tech CSE,7,,Professional Elective 5 / MOOC,CR,3-0-0,3
+B.Tech CSE,7,,Open Elective 3,CR,3-0-0,3
+B.Tech CSE,7,20CS4701,Project Phase I,CR,0-0-0,3
+B.Tech CSE,8,,Professional Elective 6,CR,3-0-0,3
+B.Tech CSE,8,20CS4801,Project Phase II,CR,0-0-0,6
+B.Tech CSE,8,20CS4802,Internship,CR,0-0-0,3
+B.Tech CSE (AI & ML),1,24EN1101,Linear Algebra and Differential Equations,BSC,3-0-0,3
+B.Tech CSE (AI & ML),1,24EN1102,Object Oriented Programming,ESC,2-1-2,4
+B.Tech CSE (AI & ML),1,24EN1103,Cognitive and Technical Skills I,TPC,0-0-4,2
+B.Tech CSE (AI & ML),1,24EN1104,Engineering Chemistry,BSC,2-0-2,3
+B.Tech CSE (AI & ML),1,24EN1105,Introduction to Mechanical Engineering,ESC,2-0-2,3
+B.Tech CSE (AI & ML),1,24EN1106,Introduction to Electrical Engineering,ESC,2-0-0,2
+B.Tech CSE (AI & ML),1,24EN1107,Engineering Mechanics,ESC,2-0-0,2
+B.Tech CSE (AI & ML),1,24EN1108,Technical English,HSMC,2-0-0,2
+B.Tech CSE (AI & ML),1,24EN1109,Environmental Science,AEC,1-0-0,0
+B.Tech CSE (AI & ML),1,24EN1110,Kannada Kali / Manasu,HSMC,1-0-0,0
+B.Tech CSE (AI & ML),2,24EN1201,Single and Multivariate Calculus,BSC,3-0-0,3
+B.Tech CSE (AI & ML),2,24EN1202,C Programming for Problem Solving,ESC,2-1-2,4
+B.Tech CSE (AI & ML),2,24EN1203,Cognitive and Technical Skills II,TPC,0-0-4,2
+B.Tech CSE (AI & ML),2,24EN1111,Engineering Physics,BSC,3-0-2,4
+B.Tech CSE (AI & ML),2,24EN1112,Introduction to Electronics Engineering,ESC,3-0-0,3
+B.Tech CSE (AI & ML),2,24EN1113,Engineering Graphics and Design Thinking,ESC,2-0-2,3
+B.Tech CSE (AI & ML),2,24EN1114,Biology for Engineers,AEC,2-0-0,2
+B.Tech CSE (AI & ML),2,24EN1115,Constitution of India and Professional Ethics,HSMC,1-0-0,0
+B.Tech CSE (AI & ML),3,24AM2301,Probability & Statistics,BSC,3-0-0,3
+B.Tech CSE (AI & ML),3,24AM2302,Data Structures,IPCC,3-0-2,4
+B.Tech CSE (AI & ML),3,24AM2303,Computer Networks,IPCC,3-0-2,4
+B.Tech CSE (AI & ML),3,24AM2304,Discrete Mathematics and Graph Theory,PCC,3-0-0,3
+B.Tech CSE (AI & ML),3,24AM2305,Computer Organization and Architecture,PCC,3-0-0,3
+B.Tech CSE (AI & ML),3,24AM2306,Embedded Systems Design,PCC,3-0-0,3
+B.Tech CSE (AI & ML),3,24AM2307,Skill Enhancement Course I (Java Programming),SEC,1-0-2,2
+B.Tech CSE (AI & ML),3,24AM2308,AI for Renewable Energy Systems,PCC,1-0-0,1
+B.Tech CSE (AI & ML),3,24AM2309,Cognitive and Technical Skills III,AEC,,P/F
+B.Tech CSE (AI & ML),4,24AM2401,Transform and Numerical Techniques,BSC,3-0-0,3
+B.Tech CSE (AI & ML),4,24AM2402,Design and Analysis of Algorithms,IPCC,3-0-2,4
+B.Tech CSE (AI & ML),4,24AM2403,Database Management System,IPCC,3-0-2,4
+B.Tech CSE (AI & ML),4,24AM2404,Theory of Computation and System Software,PCC,3-1-0,4
+B.Tech CSE (AI & ML),4,24AM2405,Artificial Intelligence,PCC,3-0-0,3
+B.Tech CSE (AI & ML),4,24AM2406,Full Stack Development,PCC,3-0-0,3
+B.Tech CSE (AI & ML),4,24AM2407,Skill Enhancement Course II (Unix and Shell Programming),SEC,1-0-2,2
+B.Tech CSE (AI & ML),4,24AM2408,Cognitive and Technical Skills IV,AEC,,P/F
+B.Tech CSE (AI & ML),5,24AM3501,Machine Learning,IPCC,3-0-2,4
+B.Tech CSE (AI & ML),5,24AM3502,Operating Systems,IPCC,3-0-2,4
+B.Tech CSE (AI & ML),5,24AM3503,Natural Language Models,PCC,3-1-0,4
+B.Tech CSE (AI & ML),5,24AM3504,Image Processing and Computer Vision,PCC,3-0-0,3
+B.Tech CSE (AI & ML),5,24AM3505,Innovation and Entrepreneurship,HSMC,2-0-0,2
+B.Tech CSE (AI & ML),5,24AM3506,Skill Enhancement Course III (Cloud Computing),SEC,1-0-2,2
+B.Tech CSE (AI & ML),5,,Professional Elective Course I,PEC,2-0-0,3
+B.Tech CSE (AI & ML),5,24AM3507,Cognitive and Technical Skills V,AEC,,P/F
+B.Tech CSE (AI & ML),6,24AM3601,Deep Learning,IPCC,3-0-2,4
+B.Tech CSE (AI & ML),6,24AM3602,Generative AI,IPCC,3-0-2,4
+B.Tech CSE (AI & ML),6,24AM3603,Designing MLOps for Enterprises,PCC,2-0-2,3
+B.Tech CSE (AI & ML),6,,Professional Elective Course II,PEC,2-0-0,3
+B.Tech CSE (AI & ML),6,,Professional Elective Course III,PEC,2-0-0,3
+B.Tech CSE (AI & ML),6,,Open Elective I,OEC,3-0-0,3
+B.Tech CSE (AI & ML),6,24AM3604,Minor Project,PROJ,0-0-0,2
+B.Tech CSE (AI & ML),6,24AM3605,Cognitive and Technical Skills VI,AEC,,P/F
+B.Tech CSE (AI & ML),7,24AM4701,Capstone Project Phase I,PROJ,0-0-0,4
+B.Tech CSE (AI & ML),7,,Professional Elective Course IV,PEC,2-0-0,3
+B.Tech CSE (AI & ML),7,,Professional Elective Course V / MOOC,PEC,2-0-0,3
+B.Tech CSE (AI & ML),7,,Open Elective II,OEC,3-0-0,3
+B.Tech CSE (AI & ML),8,24AM4801,Capstone Project Phase II,PROJ,0-0-0,12
+B.Tech CSE (AI & ML),8,24AM4802,Internship,INT,0-0-0,3
+B.Tech CSE (Cyber Security),1,24EN1101,Linear Algebra and Differential Equations,BSC,3-0-0,3
+B.Tech CSE (Cyber Security),1,24EN1102,Object Oriented Programming,ESC,2-1-2,4
+B.Tech CSE (Cyber Security),1,24EN1103,Cognitive and Technical Skills I,TPC,0-0-4,2
+B.Tech CSE (Cyber Security),1,24EN1104,Engineering Chemistry,BSC,2-0-2,3
+B.Tech CSE (Cyber Security),1,24EN1105,Introduction to Mechanical Engineering,ESC,2-0-2,3
+B.Tech CSE (Cyber Security),1,24EN1106,Introduction to Electrical Engineering,ESC,2-0-0,2
+B.Tech CSE (Cyber Security),1,24EN1107,Engineering Mechanics,ESC,2-0-0,2
+B.Tech CSE (Cyber Security),1,24EN1108,Technical English,HSMC,2-0-0,2
+B.Tech CSE (Cyber Security),1,24EN1109,Environmental Science,AEC,1-0-0,0
+B.Tech CSE (Cyber Security),1,24EN1110,Kannada Kali / Manasu,HSMC,1-0-0,0
+B.Tech CSE (Cyber Security),2,24EN1201,Single and Multivariate Calculus,BSC,3-0-0,3
+B.Tech CSE (Cyber Security),2,24EN1202,C Programming for Problem Solving,ESC,2-1-2,4
+B.Tech CSE (Cyber Security),2,24EN1203,Cognitive and Technical Skills II,TPC,0-0-4,2
+B.Tech CSE (Cyber Security),2,24EN1111,Engineering Physics,BSC,3-0-2,4
+B.Tech CSE (Cyber Security),2,24EN1112,Introduction to Electronics Engineering,ESC,3-0-0,3
+B.Tech CSE (Cyber Security),2,24EN1113,Engineering Graphics and Design Thinking,ESC,2-0-2,3
+B.Tech CSE (Cyber Security),2,24EN1114,Biology for Engineers,AEC,2-0-0,2
+B.Tech CSE (Cyber Security),2,24EN1115,Constitution of India and Professional Ethics,HSMC,1-0-0,0
+B.Tech CSE (Cyber Security),3,24CY2301,Transforms and Numerical Techniques,BSC,3-0-0,3
+B.Tech CSE (Cyber Security),3,24CY2302,Data Structures,IPCC,3-0-2,4
+B.Tech CSE (Cyber Security),3,24CY2303,Digital Logic Design,IPCC,3-0-2,4
+B.Tech CSE (Cyber Security),3,24CY2304,Discrete Mathematics and Graph Theory,PCC,3-0-0,3
+B.Tech CSE (Cyber Security),3,24CY2305,Introduction to Computer Networks,PCC,3-0-2,4
+B.Tech CSE (Cyber Security),3,24CY2306,Embedded System Design,PCC,3-0-0,3
+B.Tech CSE (Cyber Security),3,,Skill Enhancement Course I (Linux Programming / Web Technologies / DevOps),SEC,1-0-2,2
+B.Tech CSE (Cyber Security),3,,Cognitive and Technical Skills III,TPC,,P/F
+B.Tech CSE (Cyber Security),4,24CY2401,Probability & Statistics,BSC,3-0-0,3
+B.Tech CSE (Cyber Security),4,,Design and Analysis of Algorithms,PCC,3-1-0,4
+B.Tech CSE (Cyber Security),4,,Database Management System,PCC,3-0-2,4
+B.Tech CSE (Cyber Security),4,,Introduction to Cyber Security,PCC,3-0-2,4
+B.Tech CSE (Cyber Security),4,,AI Essentials for Cyber Security,PCC,3-0-0,4
+B.Tech CSE (Cyber Security),4,,Computer Organization and Architecture,PCC,3-0-0,3
+B.Tech CSE (Cyber Security),4,,Cognitive and Technical Skills IV,TPC,,P/F
+B.Tech CSE (Cyber Security),4,,Liberal Studies,AEC,1-0-0,1
+B.Tech CSE (Cyber Security),5,24CY3501,Introduction to Automata and Compiler Design,PCC,3-1-0,4
+B.Tech CSE (Cyber Security),5,24CY3502,Security Engineering and Cyber Defense,PCC,3-0-0,3
+B.Tech CSE (Cyber Security),5,24CY3503,Operating Systems,IPCC,3-0-2,4
+B.Tech CSE (Cyber Security),5,24CY3504,Cryptography and Network Security,PCC,3-0-2,4
+B.Tech CSE (Cyber Security),5,24CY3505,Forensics Fundamentals,PCC,3-0-0,3
+B.Tech CSE (Cyber Security),5,,Professional Elective Course I,PEC,3-0-0,3
+B.Tech CSE (Cyber Security),5,,Skill Enhancement Course I (IPR and Registration / Full Stack Development),SEC,1-0-2,2
+B.Tech CSE (Cyber Security),5,24CY3506,Cognitive and Technical Skills III,TPC,,P/F
+B.Tech CSE (Cyber Security),6,24CY3601,Innovation and Entrepreneurship,IPCC,2-0-0,2
+B.Tech CSE (Cyber Security),6,24CY3602,Cloud Security,PCC,3-0-2,4
+B.Tech CSE (Cyber Security),6,24CY3603,Deep Learning,PCC,3-0-2,4
+B.Tech CSE (Cyber Security),6,,Open Elective I,OEC,3-0-0,3
+B.Tech CSE (Cyber Security),6,,Professional Elective Course II,PEC,3-0-0,3
+B.Tech CSE (Cyber Security),6,,Professional Elective Course III / MOOC,PEC,3-0-0,3
+B.Tech CSE (Cyber Security),6,24CY3604,Cognitive and Technical Skills IV,TPC,,P/F
+B.Tech ECE,1,24EN1101,Linear Algebra and Differential Equations,BSC,3-0-0,3
+B.Tech ECE,1,24EN1102,Object Oriented Programming,ESC,2-1-2,4
+B.Tech ECE,1,24EN1103,Cognitive and Technical Skills I,TPC,0-0-4,2
+B.Tech ECE,1,24EN1104,Engineering Chemistry,BSC,2-0-2,3
+B.Tech ECE,1,24EN1105,Introduction to Mechanical Engineering,ESC,2-0-2,3
+B.Tech ECE,1,24EN1106,Introduction to Electrical Engineering,ESC,2-0-0,2
+B.Tech ECE,1,24EN1107,Engineering Mechanics,ESC,2-0-0,2
+B.Tech ECE,1,24EN1108,Technical English,HSMC,2-0-0,2
+B.Tech ECE,1,24EN1109,Environmental Science,AEC,1-0-0,0
+B.Tech ECE,1,24EN1110,Kannada Kali / Manasu,HSMC,1-0-0,0
+B.Tech ECE,2,24EN1201,Single and Multivariate Calculus,BSC,3-0-0,3
+B.Tech ECE,2,24EN1202,C Programming for Problem Solving,ESC,2-1-2,4
+B.Tech ECE,2,24EN1203,Cognitive and Technical Skills II,TPC,0-0-4,2
+B.Tech ECE,2,24EN1111,Engineering Physics,BSC,3-0-2,4
+B.Tech ECE,2,24EN1112,Introduction to Electronics Engineering,ESC,3-0-0,3
+B.Tech ECE,2,24EN1113,Engineering Graphics and Design Thinking,ESC,2-0-2,3
+B.Tech ECE,2,24EN1114,Biology for Engineers,AEC,2-0-0,2
+B.Tech ECE,2,24EN1115,Constitution of India and Professional Ethics,HSMC,1-0-0,0
+B.Tech ECE,3,24EC2301,Transforms and Numerical Methods,BSC,3-0-0,3
+B.Tech ECE,3,24EC2302,Analog Electronic Circuits,IPCC,3-0-2,4
+B.Tech ECE,3,24EC2303,Digital Logic Design,IPCC,3-0-2,4
+B.Tech ECE,3,24EC2304,Network Analysis,PCC,3-0-0,3
+B.Tech ECE,3,24EC2305,Computer Organization & Architecture,PCC,3-0-0,3
+B.Tech ECE,3,,Liberal Studies I,HSMC,1-0-0,1
+B.Tech ECE,3,,Skill Enhancement Course I (Model-Based Design / Microcontroller Programming),SEC,1-0-2,2
+B.Tech ECE,3,24EC2306,Cognitive and Technical Skills III,TPC,2-0-0,0
+B.Tech ECE,4,24EC2401,Probability and Statistics,BSC,3-0-0,3
+B.Tech ECE,4,24EC2402,Electromagnetic Field Theory,PCC,3-1-0,4
+B.Tech ECE,4,24EC2403,Embedded System Design,IPCC,3-0-2,4
+B.Tech ECE,4,24EC2404,Control & Instrumentation,PCC,3-0-0,3
+B.Tech ECE,4,24EC2405,Signals & Systems,PCC,3-0-0,3
+B.Tech ECE,4,24EC2406,CMOS VLSI Design,IPCC,3-0-2,4
+B.Tech ECE,4,,Skill Enhancement Course II (Circuit Design and Simulation / Embedded Machine Learning),SEC,1-0-2,2
+B.Tech ECE,4,24EC2407,Cognitive and Technical Skills IV,TPC,2-0-0,0
+B.Tech ECE,5,24EC3501,Machine Learning for Engineers,IPCC,3-0-2,4
+B.Tech ECE,5,24EC3502,Digital Signal Processing,PCC,3-0-0,3
+B.Tech ECE,5,24EC3503,Analog and Digital Communication,IPCC,3-0-2,4
+B.Tech ECE,5,24EC3504,Digital Design Verification,PCC,3-0-0,3
+B.Tech ECE,5,24EC3505,Antennas and Wave Propagation,PCC,3-0-0,3
+B.Tech ECE,5,24EC3506,Design Studio: AIOT System Design,DSC,2-0-0,2
+B.Tech ECE,5,,Professional Elective Course I / MOOC,PEC,3-0-0,3
+B.Tech ECE,5,24EC3507,Cognitive and Technical Skills V,TPC,2-0-0,0
+B.Tech ECE,6,24EC3601,Control Automation and Intelligent Machines,PCC,3-0-0,3
+B.Tech ECE,6,24EC3602,Power Electronics for Electric Vehicles and Smart Grids,IPCC,3-0-2,4
+B.Tech ECE,6,24EC3603,RF and Microwave Engineering,IPCC,3-0-2,4
+B.Tech ECE,6,24EC3604,Wireless Communication,PCC,3-0-0,3
+B.Tech ECE,6,,Professional Elective Course II / MOOC,PEC,3-0-0,3
+B.Tech ECE,6,,Open Elective I,OE,3-0-0,3
+B.Tech ECE,6,24EC3605,Minor Project,PROJ,0-0-4,2
+B.Tech ECE,6,24EC3606,Cognitive and Technical Skills VI,TPC,2-0-0,0
+B.Tech ECE,7,,Entrepreneurial Finance & Deep-Tech Start-ups,HSMC,3-0-0,3
+B.Tech ECE,7,,Professional Elective Course III / MOOC,PEC,3-0-0,3
+B.Tech ECE,7,,Professional Elective Course IV / MOOC,PEC,3-0-0,3
+B.Tech ECE,7,,Open Elective II,OE,3-0-0,3
+B.Tech ECE,7,,Capstone Project I,PROJ,0-0-0,4
+B.Tech ECE,8,,Professional Elective Course V / MOOC,PEC,3-0-0,3
+B.Tech ECE,8,,Leadership Policy & Authentic Intelligence,HSMC,2-0-0,2
+B.Tech ECE,8,,Capstone Project II,PROJ,0-0-0,10
+B.Tech ECE,8,,Internship (Industry / Research / COE Based),INT,0-0-0,2
