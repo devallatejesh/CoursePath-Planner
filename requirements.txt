@@ -1,0 +1,7 @@
+streamlit>=1.57
+mesa>=3.1
+networkx>=3.2
+numpy>=1.26
+pandas>=2.1
+altair>=5
+graphviz>=0.20

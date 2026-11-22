@@ -1,0 +1,11 @@
+name,salary_k,automation_risk,base_demand,tags,programming,math,data,ml,security,design,systems,communication
+Machine Learning Engineer,135,0.1,1.0,ai;data,0.8,0.8,0.7,0.9,0.2,0.1,0.4,0.4
+Data Scientist,120,0.15,1.1,data;ai,0.6,0.7,0.9,0.6,0.1,0.2,0.2,0.6
+Security Analyst,110,0.12,1.0,security,0.5,0.4,0.3,0.1,0.9,0.1,0.6,0.5
+UX Designer,95,0.2,0.8,hci,0.3,0.2,0.3,0.1,0.1,0.9,0.1,0.8
+Software Engineer,125,0.25,1.4,software,0.9,0.5,0.4,0.2,0.3,0.3,0.5,0.5
+Cloud / DevOps Engineer,128,0.18,1.0,cloud;systems,0.7,0.3,0.3,0.1,0.5,0.1,0.9,0.4
+Systems Engineer,118,0.2,0.7,systems,0.7,0.6,0.2,0.1,0.4,0.1,0.9,0.3
+QA / Test Engineer,85,0.6,0.9,software,0.6,0.3,0.3,0.1,0.2,0.2,0.4,0.4
+IT Support Specialist,60,0.55,1.2,systems,0.3,0.1,0.1,0.0,0.4,0.1,0.6,0.7
+Business Analyst,90,0.4,0.9,data;business,0.2,0.4,0.6,0.1,0.1,0.3,0.1,0.8

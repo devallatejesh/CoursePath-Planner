@@ -1,0 +1,4 @@
+name,salary_k,automation_risk,base_demand,tags,wetlab,coding,fieldwork
+Genomics analyst,90,0.2,1.0,genomics,0.8,0.7,0.3
+Field ecologist,60,0.1,0.8,field,0.3,0.4,0.9
+Lab technician,50,0.6,1.2,lab,0.4,0.3,0.3
