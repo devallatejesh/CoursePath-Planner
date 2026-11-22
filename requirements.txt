@@ -1,7 +1,8 @@
-streamlit>=1.57
-mesa>=3.1
+streamlit>=1.66
+mesa>=3.5
 networkx>=3.2
 numpy>=1.26
-pandas>=2.1
+pandas>=2.2
 altair>=5
 graphviz>=0.20
+openpyxl>=3.1

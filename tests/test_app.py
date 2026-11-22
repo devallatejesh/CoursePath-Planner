@@ -527,6 +527,25 @@ def test_data_manager_role_restriction():
     settings.reset(by="test")
 
 
+def test_reserved_admin_username():
+    _reset_accounts()
+    os.environ["COURSEPATH_ADMIN_USERNAME"] = "owner"
+    try:
+        assert auth.create_user("stranger", "Poplar2024g", "Stranger")[0]
+        assert auth.get_user("stranger")["role"] == "student", "first account is NOT admin when a username is reserved"
+        assert auth.create_user("owner", "Hazel2024h", "Owner")[0]
+        assert auth.get_user("owner")["role"] == "admin"
+        auth.delete_user("stranger", by="owner")
+        # once an admin exists, the reserved name gives no extra power to later accounts
+        users = auth._load(); del users["owner"]; users["boss2"] = {"name": "B", "role": "admin", "salt": "00", "hash": "x", "created": auth.now()}; auth._save(users)
+        assert auth.create_user("owner", "Hazel2024h", "Owner")[0] and auth.get_user("owner")["role"] == "student"
+        at = new_app(user=None)
+        at.run()
+        assert not any("becomes the administrator" in i.value for i in at.info), "don't advertise admin bootstrap when reserved"
+    finally:
+        del os.environ["COURSEPATH_ADMIN_USERNAME"]
+
+
 if __name__ == "__main__":
     tests = [v for k, v in dict(globals()).items() if k.startswith("test_")]
     for t in tests:

@@ -14,9 +14,22 @@ py -m pip install -r requirements.txt
 py -m streamlit run streamlit_app.py
 ```
 
+## Deploy online (Streamlit Community Cloud)
+
+1. Go to https://share.streamlit.io, sign in with GitHub and choose **Create app**.
+2. Repository `devallatejesh/CoursePath-Planner`, branch `main`, main file `streamlit_app.py`.
+3. Under **Advanced settings**, choose Python 3.12 and add this secret, so only that username can become the administrator:
+
+   ```toml
+   COURSEPATH_ADMIN_USERNAME = "devallatejesh"
+   ```
+4. Deploy, then **immediately** create the account with that username on the sign-in page.
+
+Every `git push` to `main` redeploys automatically. Free hosting has no permanent disk: accounts, settings and published data reset when the app restarts or sleeps. For permanent storage, host on a service with a persistent disk (for example Render or Railway) and point `COURSEPATH_USERS_FILE` and `COURSEPATH_DATA_DIR` at it.
+
 ## First time here?
 
-1. Start the app and **create an account** on the sign-in page, or press **Continue as guest**. The **first account ever created becomes the administrator**.
+1. Start the app and **create an account** on the sign-in page, or press **Continue as guest**. The **first account ever created becomes the administrator** (or, when `COURSEPATH_ADMIN_USERNAME` is set, the account with that username).
 2. A welcome pop-up offers the **Tutorial** (top menu), a 10-minute walkthrough with **Try this** buttons that fill in example goals for you.
 3. Build a roadmap, open the study links under each subject, try a re-plan, then run the career simulation.
 
@@ -86,7 +99,7 @@ Uploads are checked before they are applied. The checks cover missing columns, d
 - `core/agents.py`: the four agents and the orchestrator
 - `core/abm.py`: MESA `CareerPathModel`
 - `core/state.py`: the active dataset in the Streamlit session
-- `tests/test_app.py`: run with `py tests/test_app.py` (27 checks covering admin access control, login, roles, the tutorial, the planner, datasets, uploads and every page)
+- `tests/test_app.py`: run with `py tests/test_app.py` (28 checks covering admin access control, login, roles, the tutorial, the planner, datasets, uploads and every page)
 - `tests/fuzz.py`: run with `py tests/fuzz.py 300`. It generates random programs and job markets, chains re-plans, and checks that no hard rule is broken.
 
 ## Notes

@@ -10,8 +10,14 @@ Roles
     advisor  also approve roadmaps
     admin    everything, plus the Admin page (users, settings, permanent data)
 
-The very first account created becomes ``admin``. Afterwards only admins can
-grant the admin role (Admin page, or ``py scripts/make_admin.py <username>``).
+Who becomes the first admin:
+  * If ``COURSEPATH_ADMIN_USERNAME`` is set (environment variable, or a root-level
+    secret on Streamlit Community Cloud), only an account with that username is made
+    admin when it signs up, and only while no admin exists. Use this for any public
+    deployment, so a stranger can't claim the admin role.
+  * Otherwise the very first account created becomes ``admin`` (convenient locally).
+Afterwards only admins can grant the admin role (Admin page, or
+``py scripts/make_admin.py <username>``).
 """
 
 from __future__ import annotations
@@ -74,6 +80,12 @@ def _set_password(rec: dict, password: str) -> None:
     rec["salt"], rec["hash"] = salt.hex(), _hash(password, salt)
 
 
+def reserved_admin() -> str | None:
+    """Username reserved for the first administrator, if configured."""
+    name = os.environ.get("COURSEPATH_ADMIN_USERNAME", "").strip().lower()
+    return name or None
+
+
 def normalise_username(username: str) -> str:
     return (username or "").strip().lower()
 
@@ -111,14 +123,18 @@ def create_user(username: str, password: str, display_name: str, role: str = "st
         users = _load()
         if username in users:
             return False, "That username is taken."
-        first = not users
+        reserved = reserved_admin()
+        if reserved:
+            first = username == reserved and admin_count(users) == 0
+        else:
+            first = not users
         if first:
             role = "admin"
         rec = {"name": (display_name or username).strip()[:60], "role": role, "created": now(), "last_login": None}
         _set_password(rec, password)
         users[username] = rec
         _save(users)
-    audit(by or username, "create user", f"{username} as {role}" + (" (first account)" if first else ""))
+    audit(by or username, "create user", f"{username} as {role}" + (" (first administrator)" if first else ""))
     return True, "Account created" + (" (you are the administrator)" if first else "") + "."
 
 

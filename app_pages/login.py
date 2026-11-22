@@ -3,11 +3,13 @@ import time
 import streamlit as st
 
 from core import settings
-from core.auth import SIGNUP_ROLES, authenticate, create_user, user_count
+from core.auth import SIGNUP_ROLES, admin_count, authenticate, create_user, reserved_admin, user_count
 
 ss = st.session_state
 cfg = settings.load()
-first_account = user_count() == 0
+# Without a reserved admin username, the very first account becomes the administrator.
+first_account = user_count() == 0 and reserved_admin() is None
+no_admin = admin_count() == 0
 
 
 def advisor_code() -> str | None:
@@ -30,7 +32,7 @@ with mid:
     st.title(f":material/route: {cfg['app_name']}", anchor=False)
     st.caption(cfg["tagline"])
 
-    can_signup = cfg["allow_signup"] or first_account  # the first (admin) account can always be created
+    can_signup = cfg["allow_signup"] or no_admin  # the administrator account can always be created
     tabs = st.tabs([":material/login: Sign in"] + ([":material/person_add: Create account"] if can_signup else []))
 
     with tabs[0]:
