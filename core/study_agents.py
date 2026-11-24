@@ -19,6 +19,8 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 
+from mesa import Agent, Model
+
 from .curriculum import Subject, nptel_url, step_title, youtube_url
 from .resources import recommended
 
@@ -110,10 +112,23 @@ def split_topics(unit: str) -> list[str]:
     return out[:8] or [unit[:120]]
 
 
-class ProfileAgent:
+class ProfileAgent(Agent):
     name = "Profile agent"
 
-    def run(self, bb: Blackboard, goal_text: str, weeks: int, hours_per_week: float, revision_weeks: int):
+    def __init__(self, model: StudyPlanModel, goal_text: str, weeks: int,
+                 hours_per_week: float, revision_weeks: int):
+        super().__init__(model)
+        self.goal_text = goal_text
+        self.weeks = weeks
+        self.hours_per_week = hours_per_week
+        self.revision_weeks = revision_weeks
+
+    def step(self):
+        bb = self.model.blackboard
+        goal_text = self.goal_text
+        weeks = self.weeks
+        hours_per_week = self.hours_per_week
+        revision_weeks = self.revision_weeks
         text = f" {goal_text.lower()} "
         goals = [g for g, (triggers, _) in GOALS.items() if any(t in text for t in triggers)]
         free_words = tuple(w for w in re.findall(r"[a-z]{4,}", text) if w not in {"want", "become", "good", "like", "with", "this", "semester", "study", "learn", "focus", "prepare", "better", "marks"})
@@ -129,10 +144,11 @@ class ProfileAgent:
                 f"{labs} lab course(s): {lab_hours:g} h/week reserved for lab preparation"])
 
 
-class SyllabusAgent:
+class SyllabusAgent(Agent):
     name = "Syllabus agent"
 
-    def run(self, bb: Blackboard):
+    def step(self):
+        bb = self.model.blackboard
         studied = [s for s in bb.subjects if s.kind == "Theory" and s.outline]
         general = [s.title for s in studied if not s.has_official_syllabus]
         for s in studied:
@@ -150,10 +166,11 @@ class SyllabusAgent:
                + ([f"No official syllabus, so a general outline was used for: {', '.join(general)}"] if general else []))
 
 
-class PriorityAgent:
+class PriorityAgent(Agent):
     name = "Priority agent"
 
-    def run(self, bb: Blackboard):
+    def step(self):
+        bb = self.model.blackboard
         p = bb.profile
         kws = [k for k in p.keywords if k]
         by_subject: dict[str, list[Topic]] = {}
@@ -175,10 +192,11 @@ class PriorityAgent:
                [f"{i}. {t} (score {s:.2f}): {'; '.join(r)}" for i, (t, (s, r)) in enumerate(ranked, 1)])
 
 
-class SchedulerAgent:
+class SchedulerAgent(Agent):
     name = "Scheduler agent"
 
-    def run(self, bb: Blackboard):
+    def step(self):
+        bb = self.model.blackboard
         p = bb.profile
         study_weeks = p.weeks - p.revision_weeks
         budget = max(1.0, p.hours_per_week - p.lab_hours)
@@ -221,10 +239,11 @@ class SchedulerAgent:
                 f"Busiest week: {max(bb.week_hours or [0]):g} h, lightest: {min(bb.week_hours or [0]):g} h"])
 
 
-class ResourceAgent:
+class ResourceAgent(Agent):
     name = "Resource agent"
 
-    def run(self, bb: Blackboard):
+    def step(self):
+        bb = self.model.blackboard
         own = {s.title: s.resources for s in bb.subjects if s.resources}  # the university's own picks
         for t in bb.topics:
             subject = re.sub(r"\(.*?\)", "", t.subject).strip()
@@ -240,10 +259,11 @@ class ResourceAgent:
                [f"Subject resources added: {', '.join(extra)}"] if extra else [])
 
 
-class ReviewAgent:
+class ReviewAgent(Agent):
     name = "Review agent"
 
-    def run(self, bb: Blackboard):
+    def step(self):
+        bb = self.model.blackboard
         p = bb.profile
         scheduled = sum(len(w) for w in bb.weeks)
         if scheduled != len(bb.topics):
@@ -269,17 +289,33 @@ class ReviewAgent:
                f"{'Plan is usable' if ok else 'Plan has problems'}: {len(bb.issues)} note(s)", [m for _, m in bb.issues])
 
 
+AGENT_TYPES = (ProfileAgent, SyllabusAgent, PriorityAgent, SchedulerAgent, ResourceAgent, ReviewAgent)
+AGENT_NAMES = [agent_type.name for agent_type in AGENT_TYPES]
+
+
+class StudyPlanModel(Model):
+    """Run one semester plan as a single ordered Mesa step."""
+
+    def __init__(self, subjects: list[Subject], goal_text: str = "", weeks: int = DEFAULT_WEEKS,
+                 hours_per_week: float = 20, revision_weeks: int = 2):
+        super().__init__()
+        self.blackboard = Blackboard(subjects)
+        ProfileAgent(self, goal_text, weeks, hours_per_week, revision_weeks)
+        # Mesa registers agents in construction order. Each stage reads earlier stages' results.
+        for agent_type in AGENT_TYPES[1:]:
+            agent_type(self)
+
+    def step(self):
+        self.agents.do("step")
+        self.running = False
+
+
 def run_agents(subjects: list[Subject], goal_text: str = "", weeks: int = DEFAULT_WEEKS, hours_per_week: float = 20,
                revision_weeks: int = 2) -> Blackboard:
-    """Run all six agents in order and return the shared blackboard."""
-    bb = Blackboard(subjects)
-    ProfileAgent().run(bb, goal_text, weeks, hours_per_week, revision_weeks)
-    SyllabusAgent().run(bb)
-    PriorityAgent().run(bb)
-    SchedulerAgent().run(bb)
-    ResourceAgent().run(bb)
-    ReviewAgent().run(bb)
-    return bb
+    """Generate a plan through Mesa and return the result for Streamlit."""
+    model = StudyPlanModel(subjects, goal_text, weeks, hours_per_week, revision_weeks)
+    model.run_model()
+    return model.blackboard
 
 
 def plan_rows(bb: Blackboard) -> list[dict]:
@@ -290,6 +326,3 @@ def plan_rows(bb: Blackboard) -> list[dict]:
         rows.append(dict(Week=n + r + 1, Subject="All subjects", Code="", Step="", Topic="Revision and previous exam papers",
                          Hours=bb.profile.hours_per_week, Priority=""))
     return rows
-
-
-AGENT_NAMES = [a.name for a in (ProfileAgent, SyllabusAgent, PriorityAgent, SchedulerAgent, ResourceAgent, ReviewAgent)]
